@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <! -- Navigation -->
+    <nav id="desktop-nav">
+      <div class="logo">Sai Sharan Thirunagari</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <! -- Hamburger Navigation -->
+    <nav id="hamburger-nav">
+      <div class="logo">Sharan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+
+
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-photo.jpg" alt="Sharan profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Sharan</h1>
+        <p class="section__text__p2">Robotics Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button 
+            class="btn btn-color-1" 
+            onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/sai-sharan-thirunagari/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-photo.jpeg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelors Degree in Mechanical Engineering<br />Masters Degree in Robotics</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              As a proficient roboticist, I possess expertise in mechatronics, integrating mechanical, electronic, and computer engineering to create intelligent machines. 
+              My proficiency in control systems, robot kinematics and dynamics, and AI techniques like neural networks and computer vision enable robots to adapt to their environment and navigate accurately. 
+              I excel in path planning, manipulation, and human-robot interaction, leveraging the Robot Operating System (ROS) for scalable development.
+            </p>
+            <div style="height: 16px;"></div>
+            <p>
+              My research interests are deeply rooted in the intricate world of manipulation, perception, Simultaneous Localization and Mapping (SLAM), motion planning, and manipulation. 
+              I am particularly fascinated by the way these areas interplay to bring about sophisticated robotic systems capable of interacting intelligently with their environment. 
+              I am committed to contributing to advancements in these fields, aiming to develop innovative solutions that can address real-world challenges.
+            </p>
+            <div style="height: 16px;"></div>
+            <p>
+            In addition to technical skills, I bring strong soft skills to collaborative environments. 
+            My effective communication, creative problem-solving, adaptability, and leadership abilities ensure successful teamwork and project outcomes. 
+            My work is driven by a passion for innovation and a commitment to advancing robotic capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+  
+<! -- Experience -->
+  <section id="experience">
+    <div class="section-header">
+        <p class="section-subtitle">Explore My</p>
+        <h1 class="section-title">Skills</h1>
+    </div>
+    <div class="skills-container">
+        <div class="skills-category">
+            <h2 class="category-title">Software Development</h2>
+            <div class="skill">
+              <img src="./assets/checkmark.png" alt="Software icon" class="skill-icon">
+              <h3>Python, C++, Java, MATLAB</h3>
+          </div>
+          <div class="skill">
+              <img src="./assets/checkmark.png" alt="Robotics framework icon" class="skill-icon">
+              <h3>ROS, Gazebo, MoveIt!</h3>
+          </div>
+          <div class="skill">
+              <img src="./assets/checkmark.png" alt="AI icon" class="skill-icon">
+              <h3>Deep Learning (Pytorch), Computer Vision (OpenCV)</h3>
+          </div>
+          <div class="skill">
+              <img src="./assets/checkmark.png" alt="Control systems icon" class="skill-icon">
+              <h3>PID Controllers, Model Predictive Control</h3>
+          </div>
+          <div class="skill">
+              <img src="./assets/checkmark.png" alt="Algorithms icon" class="skill-icon">
+              <h3>Path Planning, SLAM, Sensor Fusion</h3>
+          </div>
+          <div class="skill">
+              <img src="./assets/checkmark.png" alt="Version control icon" class="skill-icon">
+              <h3>Git, SVN</h3>
+          </div>
+        </div>
+ 
+
+      <div class="skills-category">
+          <h2 class="category-title">Mechanical and Hardware</h2>
+          <div class="skill">
+            <img src="./assets/checkmark.png" alt="Mechanical design icon" class="skill-icon">
+            <h3>CAD Software (SolidWorks, Fusion 360)</h3>
+        </div>
+        <div class="skill">
+            <img src="./assets/checkmark.png" alt="Finite element analysis icon" class="skill-icon">
+            <h3>Finite Element Analysis (ANSYS, Abaqus)</h3>
+        </div>
+        <div class="skill">
+            <img src="./assets/checkmark.png" alt="Mechanics icon" class="skill-icon">
+            <h3>Kinematics, Dynamics, Statics</h3>
+        </div>
+        <div class="skill">
+            <img src="./assets/checkmark.png" alt="Materials icon" class="skill-icon">
+            <h3>Material Selection, Stress Analysis</h3>
+        </div>
+          <div class="skill">
+            <img src="./assets/checkmark.png" alt="Electronics icon" class="skill-icon">
+            <h3>Microcontrollers (Arduino, Raspberry Pi)</h3>
+        </div>
+        <div class="skill">
+            <img src="./assets/checkmark.png" alt="PCB design icon" class="skill-icon">
+            <h3>PCB Design (Eagle, Altium)</h3>
+        </div>
+        <div class="skill">
+            <img src="./assets/checkmark.png" alt="Sensors icon" class="skill-icon">
+            <h3>Sensors & Actuators (LIDAR, Camera, Motors, Pnuematics)</h3>
+        </div>
+        <div class="skill">
+            <img src="./assets/checkmark.png" alt="Embedded systems icon" class="skill-icon">
+            <h3>Embedded Systems Programming</h3>
+        </div>
+      </div>
+      <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#projects'"
+    />
+  </div>
+    
+    <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="arrow-icon" onclick="location.href='./#projects'"> -->
+</section>
+
+    <!-- <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/project-1.png"
+              alt="Project 1"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/project-2.png"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/project-3.png"
+              alt="Project 3"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section> -->
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <a href="#modal1" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <a href="#modal2" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <a href="#modal3" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          
+          <!-- Add more projects here -->
+        </div>
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Four</h2>
+            <div class="btn-container">
+              <a href="#modal4" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Five</h2>
+            <div class="btn-container">
+              <a href="#modal5" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Six</h2>
+            <div class="btn-container">
+              <a href="#modal6" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for Project One -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Project One</h2>
+          <p>Description of Project One...</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Project Two</h2>
+          <p>Description of Project Two...</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Project Three</h2>
+          <p>Description of Project Three...</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Project Four</h2>
+          <p>Description of Project Four...</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Project Five</h2>
+          <p>Description of Project Five...</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Project Six</h2>
+          <p>Description of Project Six...</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+      <!-- Add more modals for other projects -->
+    </section>
+    
+    
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:saisharanthirunagari@gmail.com">saisharanthirunagari@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p> -->
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
