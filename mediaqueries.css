@@ -45,30 +45,6 @@
   .about-containers {
     margin-top: 0;
   }
-  .skills-container {
-    flex-direction: column;
-  }
-
-  .skills-category {
-    flex-basis: 100%;
-    min-width: auto; /* Adjust to fit the screen */
-  }
-
-  .category-title,
-  .section-subtitle,
-  .section-title {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .skill {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .skill-icon {
-    width: 30px; /* Adjust icon size for smaller screens */
-    height: 30px;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -123,32 +99,5 @@
   }
   .text-container {
     text-align: justify;
-  }
-  .skills-container {
-    gap: 1.5rem;
-    text-align: justify;
-  }
-
-  .skills-category {
-    padding: 0.75rem;
-  }
-
-  .category-title,
-  .section-subtitle,
-  .section-title {
-    font-size: 1.25rem; /* Further adjust font size for smaller screens */
-  }
-
-  .skill {
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .skill-icon {
-    width: 25px; /* Further adjust icon size for smaller screens */
-    height: 25px;
-  }
-  .skills-list {
-    font-size: 1rem; /* Adjust this value as needed */
   }
 }
