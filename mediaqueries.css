@@ -126,6 +126,7 @@
   }
   .skills-container {
     gap: 1.5rem;
+    text-align: justify;
   }
 
   .skills-category {
