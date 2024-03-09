@@ -390,7 +390,6 @@ article .icon {
 }
 
 .skills-category {
-  flex-basis: 50%;
   min-width: 600px; /* Adjust this value based on the number of categories and desired spacing */
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -432,7 +431,7 @@ article .icon {
     font-size: 2rem;
 
   }
-  
+
   
 
 }
