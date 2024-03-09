@@ -424,7 +424,7 @@ article .icon {
   margin-right: 2px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .skills-container {
       flex-direction: column;
   }
