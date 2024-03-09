@@ -437,7 +437,7 @@ article .icon {
     font-size: 1.15rem;
   }
   .skills-category {
-    flex-basis: auto;
+    flex-basis: 40%;
   }
   
 
