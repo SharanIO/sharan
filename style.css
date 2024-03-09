@@ -424,8 +424,11 @@ article .icon {
   margin-right: 2px;
 }
 
-
-
+@media screen and (max-width: 768px) {
+  .skills-container {
+      flex-direction: column;
+  }
+}
 
 
 /* PROJECTS SECTION */
