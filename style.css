@@ -434,8 +434,8 @@ article .icon {
   .skills-category {
     flex-shrink: auto;
   }
-  .category-title {
-    font-size: 1.15rem;
+  .skill {
+    font-size: 0.5rem;
   }
 
   
