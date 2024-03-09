@@ -397,7 +397,6 @@ article .icon {
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  font-size: 2rem;
 }
 
 .category-title {
@@ -431,13 +430,9 @@ article .icon {
   }
   .section-title {
     font-size: 2rem;
+
   }
-  .category-title {
-    font-size: 1.15rem;
-  }
-  .skills-category {
-    flex-wrap: wrap;
-  }
+  
   
 
 }
