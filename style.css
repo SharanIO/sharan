@@ -428,6 +428,9 @@ article .icon {
   .skills-container {
       flex-direction: column;
   }
+  .skills-category {
+    flex-basis: 80%;
+}
 }
 
 
