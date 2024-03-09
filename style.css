@@ -428,9 +428,7 @@ article .icon {
   .skills-container {
       flex-direction: column;
   }
-  .skills-list {
-    font-size: 0.9rem; /* Adjust this value as needed */
-  }
+  
 
 }
 
