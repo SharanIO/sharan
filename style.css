@@ -417,8 +417,8 @@ article .icon {
 
 .skill-icon {
   cursor: default;
-  width: 40px;
-  height: 40px;
+  width: auto;
+  height: 1.5rem;
   margin-right: 2px;
 }
 
