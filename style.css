@@ -264,6 +264,7 @@ section {
 /* ABOUT SECTION */
 
 #about {
+  display: block;
   position: relative;
 }
 
@@ -305,8 +306,46 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  /* margin-top: 100px; */
+  
 }
 
+.details-container1 {
+  padding: 1.5rem;
+  display: flex;
+  /* flex: 1; */
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.degrees-container {
+  display: flex;
+  justify-content: space-around; /* Adjust spacing between the degrees */
+}
+
+.degree {
+  text-align: center;
+}
+
+.university-logo {
+  width: 250px; /* Adjust the width as needed */
+  height: auto;
+  vertical-align: left;
+  margin-bottom: 18px;
+  margin-top: 20px;
+  
+}
+.university-logo1 {
+  width: 150px; /* Adjust the width as needed */
+  height: auto;
+  vertical-align: left;
+  /* margin-bottom: 10px; */
+  margin-top: 20px;
+  
+}
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -363,6 +402,7 @@ article .icon {
 #experience {
   position: relative;
   height: fit-content;
+  margin-top: 50px;
 }
 
 .section-header {
