@@ -381,7 +381,7 @@
           </div>
           <div class="details-container color-container">
             <div class="article-container">
-              <img src="./assets/RL_1.png" alt="Project 1" class="project-img" />
+              <img src="./assets/Drl.gif" alt="Project 1" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">Deep Reinforcement Learning in Robotics</h2>
             <div class="btn-container">
@@ -426,7 +426,10 @@
         <div class="modal-content">
           <a href="#projects" class="close-btn">&times;</a>
           <h2>Soft Object Manipulation</h2>
-          <p>Description of Project One...</p>
+          <p>Manipulating soft objects and tissues poses distinct challenges in robotics, primarily due to their inherent properties, such as deformability, variability in shape, and the delicate nature of their surfaces.
+             Traditional robotic systems, designed for rigidity and precision when interacting with solid objects, often fall short when applied to soft materials, necessitating a paradigm shift towards more compliant and adaptive manipulative strategies.
+          </p>
+          <p>One particular area of focus within soft object manipulation is soft tissue manipulation, which has significant implications for medical robotics, especially in minimally invasive surgery and rehabilitation. The ability to manipulate soft tissues with precision and sensitivity is crucial for enhancing surgical outcomes and patient recovery. However, soft tissues' inherent variability and vulnerability pose significant challenges for robotic systems regarding sensing, control, and interaction.</p>
           <a href="https://example.com/demo1" target="_blank">View Demo</a>
         </div>
       </div>
@@ -434,8 +437,51 @@
       <div id="modal2" class="modal">
         <div class="modal-content">
           <a href="#projects" class="close-btn">&times;</a>
-          <h2>Adaptive Control of Snake Robot</h2>
-          <p>Description of Project Two...</p>
+          <h2>Snake Robot</h2>
+          <p>Snake robots, inspired by the natural movement of serpents, represent a significant advancement in the field of robotics.
+             Their elongated, flexible bodies allow them to navigate through complex environments that are challenging for more traditional robots.
+              This versatility is particularly useful in scenarios that require access to confined spaces or the ability to maneuver around obstacles.
+             The modular design of these robots also provides a level of redundancy, ensuring continued operation even if one segment fails.</p><br>
+          <p>In practical applications, snake robots have proven to be invaluable tools.
+             They are employed in search and rescue missions to traverse debris and locate survivors in disaster-stricken areas. 
+             In the medical realm, miniaturized versions are used for minimally invasive surgical procedures, enabling surgeons to reach and operate in areas that were previously inaccessible. 
+             Moreover, snake robots are utilized for inspection and maintenance tasks in industrial settings, such as examining the interior of pipelines and ducts. 
+             Their ability to explore and navigate tight spaces also makes them ideal for scientific exploration, such as spelunking and underwater research. 
+            The ongoing development of snake robots continues to push the boundaries of robotics, offering new solutions to old problems and opening up possibilities in various fields.</p><br>
+          <h3>Mechanical Design</h3>
+          <p>The snake robot is designed with modularity in mind, allowing for flexibility in its configuration and ensuring redundancy in its operation. 
+            Each module of the robot is connected perpendicularly to the next, providing a wide range of movement and enabling the robot to navigate through various terrains and obstacles.</p><br>
+          <p>The robot's design is centered around 10 degrees of freedom (DOF), which are crucial for replicating the intricate movements of a natural snake. 
+            This design choice allows the robot to perform complex maneuvers such as sidewinding, climbing, and even swimming.</p><br>
+          <h3>Manufacturing Process</h3>
+          <p>The components of the snake robot were fabricated using a Prusa i3 Mk3s Bear 3D printer, known for its precision and reliability. 
+            PETG filament was chosen for its strength and durability, ensuring that the robot can withstand the demands of various environments.</p><br>
+          <p>The manufacturing process involved careful consideration of the dimensions of the MG995 servo motors and the M3 countersunk screws, which are integral to the assembly of the robot's modules. 
+            Each module was printed with a 15% infill, striking a balance between lightweight construction and structural integrity.</p><br>
+          <h3>Control and Electronics</h3>
+          <p>The heart of the snake robot's control system is the NVIDIA Jetson Nano, a powerful and compact computer that enables advanced processing capabilities. 
+            This is complemented by the PCA9685 board, which facilitates communication between the Jetson Nano and the servo motors through I2C.</p><br>
+          <p>The servo motors, specifically the Tower Pro MG995 models, are responsible for the actuation of each joint in the robot. 
+            They are connected in parallel and powered from the tail end of the robot, ensuring a streamlined and efficient setup.</p><br>
+          <p>The control algorithms are meticulously developed to enable the robot to perform various gaits and movements, with parameters fine-tuned through both simulation and physical testing. 
+            This ensures that the robot can adapt to different terrains and complete its tasks effectively.</p><br>
+          <h3>Simulation</h3>
+          <p>To ensure the robot's movements are precise and efficient, simulations were conducted using PyBullet, a real-time physics simulator popular for its accuracy and capability in robot simulation. 
+            PyBullet provided a platform to test various gaits and movements, such as sidewinding and rotation, without the need for physical trials.</p><br>
+          <p>The Universal Robot Description Format (URDF) was used to describe the robot's joints and links, allowing for a detailed simulation of its mechanics. 
+            This process involved adjusting parameters such as joint angles, amplitudes, and offsets to mimic the natural movements of a snake.</p><br>
+          <h3>Experimental Setup</h3>
+          <p>The physical testing of the snake robot was conducted on different surfaces to evaluate its performance under various conditions. 
+            These surfaces included a plain table, cardboard, and a yoga mat, each offering different levels of friction. 
+            It was observed that the robot performed best on the plain table due to its optimal friction characteristics.</p><br>
+          <p>The experiments focused on the robot's ability to execute the gaits simulated in PyBullet. 
+            Adjustments were made to the control parameters to account for real-world factors such as friction and the weight distribution of the robot.</p><br>
+          <h3>Results</h3>
+          <p>The results of the experiments were promising, with the snake robot successfully performing the programmed gaits. 
+            The sidewinding motion, in particular, demonstrated the robot's ability to navigate laterally, a crucial aspect of its design.</p><br>
+          <p>The rotation gait allowed the robot to turn around its axis, showcasing its agility and control. 
+            The rectilinear motion, a more straightforward movement, was also achieved, highlighting the robot's versatility in locomotion.</p><br>
+          
           <a href="https://example.com/demo1" target="_blank">View Demo</a>
         </div>
       </div>
@@ -462,7 +508,22 @@
         <div class="modal-content">
           <a href="#projects" class="close-btn">&times;</a>
           <h2>Stereo Visual Odometry</h2>
-          <p>Description of Project Five...</p>
+          <p>Visual odometry is essential for autonomous navigation, especially in GPS-denied environments.
+             It involves estimating the position and orientation of a vehicle using images captured by onboard cameras. 
+            This technology is crucial for maintaining accurate navigation and ensuring the safety and reliability of autonomous vehicles.</p><br>
+          <p>The applications of visual odometry are diverse, including robotics for indoor navigation, augmented reality for device tracking, unmanned aerial vehicles for navigation without GPS, and space exploration for navigating extraterrestrial surfaces. 
+            Overall, visual odometry is a foundational technology that enables autonomous systems to navigate and localize in challenging environments.</p><br>
+          <p>The implementation of stereo visual odometry for the autonomous vehicle was approached with a systematic workflow, integrating ROS, Gazebo simulator, and stereo camera technology. 
+            The process can be outlined in the following steps:</p><br>
+          <p><strong>1. Simulation Environment Setup: </strong> Utilizing Gazebo, a simulation environment was created to mimic real-world scenarios, allowing for the testing and refinement of the visual odometry algorithms in a controlled setting.</p><br>
+          <p><strong>2. Stereo Camera Calibration: </strong> The stereo camera mounted on the autonomous vehicle was calibrated to determine its intrinsic parameters. This step is crucial for accurate depth estimation and image rectification.</p><br>
+          <p><strong>3. Image Aquisition: </strong> As the vehicle navigated through the simulated environment, images were continuously captured from the left and right cameras of the stereo setup.</p><br>
+          <p><strong>4. Feature Detection and Matching: </strong> Key features were detected and matched between consecutive frames of the left and right camera images. This process is vital for tracking the movement of feature points and estimating the vehicle's motion.</p><br>
+          <p><strong>5. Stereo Triangulation: </strong> The matched features, along with the camera's intrinsic parameters, were used for stereo triangulation to obtain 3D points in the environment, providing essential depth information.</p><br>
+          <p><strong>6. Pose Estimation: </strong> The relative pose (position and orientation) of the vehicle was estimated by comparing the 3D points across consecutive frames, solving a Perspective-n-Point (PnP) problem to determine the vehicle's movement.</p><br>
+          <p><strong>7. Odometry Computation: </strong> The estimated poses were accumulated over time to compute the vehicle's odometry, yielding a continuous estimate of its trajectory through the environment.</p><br>
+          <p><strong>8. Visualization: </strong>  The estimated trajectory was visualized within the simulation environment to verify the accuracy and reliability of the visual odometry system, providing insights into the system's performance.</p><br>
+
           <a href="https://example.com/demo1" target="_blank">View Demo</a>
         </div>
       </div>
