@@ -374,7 +374,7 @@
             <div class="article-container">
               <img src="./assets/Snake.gif" alt="Project 1" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Adaptive Control of Snake Robot</h2>
+            <h2 class="experience-sub-title project-title">Snake Robot</h2>
             <div class="btn-container">
               <a href="#modal2" class="btn btn-color-2 project-btn">Learn More</a>
             </div>
@@ -396,7 +396,7 @@
             <div class="article-container">
               <img src="./assets/map2_result.png" alt="Project 1" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Robotic Navigation and Obstacle Avoidance</h2>
+            <h2 class="experience-sub-title project-title">Collision Avoidance and Path Planning for Industrial Robot</h2>
             <div class="btn-container">
               <a href="#modal4" class="btn btn-color-2 project-btn">Learn More</a>
             </div>
@@ -481,10 +481,14 @@
             The sidewinding motion, in particular, demonstrated the robot's ability to navigate laterally, a crucial aspect of its design.</p><br>
           <p>The rotation gait allowed the robot to turn around its axis, showcasing its agility and control. 
             The rectilinear motion, a more straightforward movement, was also achieved, highlighting the robot's versatility in locomotion.</p><br>
-          
+          <h3>Future Work</h3>
+          <p>The next phase of development for the snake robot involves integrating reinforcement learning (RL) algorithms to enhance its autonomy and adaptability. 
+            By employing RL, the robot will be able to learn from its environment and improve its performance over time, adapting its movements to different terrains and obstacles more effectively.</p><br>
+          <p>The focus will be on developing a robust RL framework that can handle the complexity of the robot's movements and the variety of tasks it needs to perform. 
+            sThis will involve training the robot in simulated environments before transferring the learned behaviors to the physical robot.</p>
           <a href="https://example.com/demo1" target="_blank">View Demo</a>
         </div>
-      </div>
+      </div>>
 
       <div id="modal3" class="modal">
         <div class="modal-content">
@@ -498,8 +502,47 @@
       <div id="modal4" class="modal">
         <div class="modal-content">
           <a href="#projects" class="close-btn">&times;</a>
-          <h2>Robotic Navigation and Obstacle Avoidance</h2>
-          <p>Description of Project Four...</p>
+          <h2>Collision Avoidance and Path Planning for Industrial Robot</h2>
+          <p>The importance of collision-free trajectory generation lies in its potential to enhance the safety and effectiveness of robotic systems. 
+            In scenarios where robots and humans coexist, ensuring that robots can avoid collisions is paramount for preventing accidents and facilitating seamless interaction. 
+            This capability is also essential in industrial settings, where robots need to maneuver around obstacles and work in close proximity to human operators.</p><br>
+          <p>Furthermore, the principles and algorithms developed in this project have broader implications beyond human-robot interaction. 
+            They are applicable in autonomous vehicles, drone navigation, and even in surgical robotics, where precision and safety are of utmost importance. 
+            By enabling robots to intelligently plan their paths and avoid obstacles, we can unlock new possibilities in automation and robotics, paving the way for more advanced and collaborative systems.</p><br>
+          <h3>Objectives</h3>
+          <p>The main goals of this project were:</p><br>
+          <p><strong>1. Detect Collisions:</strong>Create a system that can spot potential crashes between the robot arm and obstacles.</p>
+          <p><strong>2. Plan Safe Paths:</strong>Develop methods for the robot to find and follow routes that avoid hitting anything.</p>
+          <p><strong>3. Make Path Planning Efficient:</strong>Ensure the robot can quickly make decisions without sacrificing safety.</p>
+          <p><strong>4. Improve Interaction with Humans:</strong>Build a robot that can safely work around people.</p><br>
+          <h3>Challenges</h3>
+          <p>Achieving these goals was tough because::</p><br>
+          <p><strong>1. Moving Obstacles:</strong>It's tricky for the robot to predict and dodge things that are moving.</p>
+          <p><strong>2. Speed vs. Safety:</strong> The robot needs to make fast decisions but still be safe.</p>
+          <p><strong>3. Reliable Sensors: </strong>The robot relies on accurate data from its sensors to avoid obstacles.</p>
+          <p><strong>4. Finding the Best Path: </strong>It's hard to find a path that's both safe and doesn't take too long.</p><br>
+          <h3>Methodology and implementation</h3>
+          <p>The project encompassed three principal components:</p>
+          <p><strong>Static Obstacle Detection and Avoidance:</strong></p>
+          <p>I configured the robot to detect stationary obstacles within its operational space. 
+            This involved setting up sensors and programming the robot to recognize obstacles in its path. 
+            By accurately identifying the presence of obstacles, the robot could make informed decisions about its movement. 
+            Utilizing Hermite interpolation, I devised a trajectory that would prompt the robot to halt if a potential collision was detected. 
+            This precautionary measure ensured the safety of both the robot and its surroundings, preventing any possible accidents due to collisions.</p><br>
+            <p><strong>Collision-Free Trajectory Generation for Static Obstacles:</strong></p>
+            <p>My objective was to generate trajectories that circumvent collisions with static obstacles. 
+              To achieve this, I focused on creating safe and efficient paths that the robot could follow while avoiding any obstructions in its environment. 
+              I employed the Probabilistic Road Maps (PRM) technique to construct a network of safe paths. This involved generating random configurations and connecting them to form a graph of possible paths. 
+              To identify the optimal route from the starting point to the destination, I implemented the A* search algorithm, which efficiently found the shortest path while ensuring collision avoidance.</p><br>
+            <p><strong>Collision-Free Trajectory Generation for Dynamic Obstacles:</strong></p>
+            <p>I explored strategies to navigate around moving obstacles, which presented a more complex challenge compared to static obstacles. 
+              This required the robot to dynamically adjust its path in response to the changing positions of the obstacles. 
+              Focusing on the RRT* and Temporal-PRM methods, I investigated their effectiveness in handling dynamic environments. 
+              The Temporal-PRM approach, which adapts PRM for dynamic environments by forecasting obstacle movements, proved particularly efficacious. 
+              It allowed the robot to plan its path with foresight, considering the future positions of the obstacles and adjusting its trajectory accordingly.</p><br>
+            <p>Throughout the project, I utilized MATLAB for algorithm development and V-REP for conducting simulations. 
+              This enabled me to rigorously test the robot's ability to maneuver safely in simulated environments, thereby demonstrating the viability of the proposed solutions. 
+              The successful implementation of these methodologies underscored the potential of advanced path planning techniques in enhancing the safety and efficiency of robotic systems.</p>
           <a href="https://example.com/demo1" target="_blank">View Demo</a>
         </div>
       </div>
