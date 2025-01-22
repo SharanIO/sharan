@@ -1,0 +1,217 @@
+/* ======================
+   Base Styles & Reset
+======================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ======================
+   Typography
+======================= */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* ======================
+   Layout & Grid
+======================= */
+.section-padding {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+  gap: 4rem;
+  height: 80%;
+}
+
+/* ======================
+   Navigation
+======================= */
+/* Desktop Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  cursor: default;
+}
+
+/* Hamburger Menu */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Menu Icon Styles */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* ======================
+   Components
+======================= */
+/* Buttons */
+.btn {
+  font-weight: 600;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Icons */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* ======================
+   Sections
+======================= */
+/* Profile Section */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* About Section */
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Experience/Skills Section */
+#experience {
+  position: relative;
+  height: fit-content;
+  margin-top: 50px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Projects Section */
+#projects {
+  position: relative;
+  height: fit-content;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+/* Contact Section */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+/* ======================
+   Footer
+======================= */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+/* ======================
+   Utilities
+======================= */
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+/* ======================
+   Animations & Transitions
+======================= */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* ======================
+   Modal Styles
+======================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+}

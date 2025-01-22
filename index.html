@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <! -- Navigation -->
+    <nav id="desktop-nav">
+      <div class="logo">Sai Sharan Thirunagari</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <! -- Hamburger Navigation -->
+    <nav id="hamburger-nav">
+      <div class="logo">Sharan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+
+
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-photo.jpg" alt="Sharan profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Sharan</h1>
+        <p class="section__text__p2">Robotics Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Sai_Sharan_Thirunagari_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button 
+            class="btn btn-color-1" 
+            onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/sai-sharan-thirunagari/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/SharanIO'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="section-container">
+        <div class="section__text">
+          <p class="section__text__p1">Get To Know More</p>
+          <h1 class="title">About Me</h1>
+        </div>
+        <div class="about-content">
+          <div class="about-pic-container">
+            <img src="./assets/about-photo.jpeg" alt="Profile picture" class="about-pic">
+          </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <div class="degrees-container">
+                <div class="degree">
+                  <a href="https://www.snu.edu.in/" target="_blank">
+                    <img src="./assets/snu_logo.png" alt="Bachelor's Degree University Logo" class="university-logo1" />
+                  </a>
+                  <p><strong>Bachelor of Technology in Mechanical Engineering</strong></p>
+                </div>
+                <div class="degree">
+                  <a href="https://www.buffalo.edu/" target="_blank">
+                    <img src="./assets/UB_logo.png" alt="Master's Degree University Logo" class="university-logo" />
+                  </a>
+                  <p><strong>Masters in Robotics</strong></p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              As a proficient roboticist, I possess expertise in mechatronics, integrating mechanical, electronic, and computer engineering to create intelligent machines. 
+              My proficiency in control systems, robot kinematics and dynamics, and AI techniques like neural networks and computer vision enable robots to adapt to their environment and navigate accurately. 
+              I excel in path planning, manipulation, and human-robot interaction, leveraging the Robot Operating System (ROS) for scalable development.
+            </p>
+            <div style="height: 16px;"></div>
+            <p>
+              My research interests are deeply rooted in the intricate world of manipulation, perception, Simultaneous Localization and Mapping (SLAM), motion planning, and manipulation. 
+              I am particularly fascinated by the way these areas interplay to bring about sophisticated robotic systems capable of interacting intelligently with their environment. 
+              I am committed to contributing to advancements in these fields, aiming to develop innovative solutions that can address real-world challenges.
+            </p>
+            <div style="height: 16px;"></div>
+            <p>
+            In addition to technical skills, I bring strong soft skills to collaborative environments. 
+            My effective communication, creative problem-solving, adaptability, and leadership abilities ensure successful teamwork and project outcomes. 
+            My work is driven by a passion for innovation and a commitment to advancing robotic capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+  
+<! -- Experience -->
+  <section id="experience">
+    <div class="section-header">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+    </div>
+    <div class="skills-container">
+        <div class="skills-category">
+            <h2 class="category-title">Software Development</h2>
+            <div class="skill">
+              <img src="./assets/program.png" alt="Software icon" class="skill-icon">
+              <p style = "font-size:16px">Python, C++, Java, MATLAB</p>
+          </div>
+          <div class="skill">
+              <img src="./assets/framework.png" alt="Robotics framework icon" class="skill-icon">
+              <p>ROS, Gazebo, MoveIt!</p>
+          </div>
+          <div class="skill">
+              <img src="./assets/ai.png" alt="AI icon" class="skill-icon">
+              <p>Deep Learning (Pytorch), Computer Vision (OpenCV)</p>
+          </div>
+          <div class="skill">
+              <img src="./assets/control.png" alt="Control systems icon" class="skill-icon">
+              <p>PID Controllers, Model Predictive Control</p>
+          </div>
+          <div class="skill">
+              <img src="./assets/algorithm.png" alt="Algorithms icon" class="skill-icon">
+              <p>Path Planning, SLAM, Sensor Fusion</p>
+          </div>
+          <div class="skill">
+              <img src="./assets/version.png" alt="Version control icon" class="skill-icon">
+              <p>Git, SVN</p>
+          </div>
+        </div>
+ 
+
+      <div class="skills-category">
+          <h2 class="category-title">Mechanical and Hardware</h2>
+          <div class="skill">
+            <img src="./assets/design.png" alt="Mechanical design icon" class="skill-icon">
+            <p>CAD Software (SolidWorks, Fusion 360)</p>
+        </div>
+        <div class="skill">
+            <img src="./assets/mesh.png" alt="Finite element analysis icon" class="skill-icon">
+            <p>Finite Element Analysis (ANSYS, Abaqus)</p>
+        </div>
+        <div class="skill">
+            <img src="./assets/mechanics.png" alt="Mechanics icon" class="skill-icon">
+            <p>Kinematics, Dynamics, Statics</p>
+        </div>
+        <div class="skill">
+            <img src="./assets/materials.png" alt="Materials icon" class="skill-icon">
+            <p>Material Selection, Stress Analysis</p>
+        </div>
+          <div class="skill">
+            <img src="./assets/microcontroller.png" alt="Electronics icon" class="skill-icon">
+            <p>Microcontrollers (Arduino, Raspberry Pi)</p>
+        </div>
+        <div class="skill">
+            <img src="./assets/pcb.png" alt="PCB design icon" class="skill-icon">
+            <p>PCB Design (Eagle, Altium)</p>
+        </div>
+        <div class="skill">
+            <img src="./assets/sensor.png" alt="Sensors icon" class="skill-icon">
+            <p>Sensors & Actuators (LIDAR, Camera, Motors, Pnuematics)</p>
+        </div>
+        <div class="skill">
+            <img src="./assets/embedded.png" alt="Embedded systems icon" class="skill-icon">
+            <p>Embedded Systems Programming</p>
+        </div>
+      </div>
+      <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#projects'"
+    />
+  </div>
+    
+    <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="arrow-icon" onclick="location.href='./#projects'"> -->
+</section>
+
+    <!-- <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/project-1.png"
+              alt="Project 1"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/project-2.png"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/project-3.png"
+              alt="Project 3"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section> -->
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Full_assembly_1.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Soft Object Manipulation</h2>
+            <div class="btn-container">
+              <a href="#modal1" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Snake.gif" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Snake Robot</h2>
+            <div class="btn-container">
+              <a href="#modal2" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Drl.gif" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Deep Reinforcement Learning in Robotics</h2>
+            <div class="btn-container">
+              <a href="#modal3" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          
+          <!-- Add more projects here -->
+        </div>
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/map2_result.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Collision Avoidance and Path Planning for Industrial Robot</h2>
+            <div class="btn-container">
+              <a href="#modal4" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/diagram.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Stereo Visual Odometry</h2>
+            <div class="btn-container">
+              <a href="#modal5" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/hri.gif" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title"> Emotion, Age, and Gender Recognition for Human-Robot Interaction</h2>
+            <div class="btn-container">
+              <a href="#modal6" class="btn btn-color-2 project-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+      <!-- Modal for Project One -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Soft Object Manipulation</h2>
+          <p>Manipulating soft objects and tissues poses distinct challenges in robotics, primarily due to their inherent properties, such as deformability, variability in shape, and the delicate nature of their surfaces.
+             Traditional robotic systems, designed for rigidity and precision when interacting with solid objects, often fall short when applied to soft materials, necessitating a paradigm shift towards more compliant and adaptive manipulative strategies.
+          </p>
+          <p>One particular area of focus within soft object manipulation is soft tissue manipulation, which has significant implications for medical robotics, especially in minimally invasive surgery and rehabilitation. 
+            The ability to manipulate soft tissues with precision and sensitivity is crucial for enhancing surgical outcomes and patient recovery. 
+            However, soft tissues' inherent variability and vulnerability pose significant challenges for robotic systems regarding sensing, control, and interaction.</p>
+          <p> Project in Progress.....</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Snake Robot</h2>
+          <p>Snake robots, inspired by the natural movement of serpents, represent a significant advancement in the field of robotics.
+             Their elongated, flexible bodies allow them to navigate through complex environments that are challenging for more traditional robots.
+              This versatility is particularly useful in scenarios that require access to confined spaces or the ability to maneuver around obstacles.
+             The modular design of these robots also provides a level of redundancy, ensuring continued operation even if one segment fails.</p><br>
+          <p>In practical applications, snake robots have proven to be invaluable tools.
+             They are employed in search and rescue missions to traverse debris and locate survivors in disaster-stricken areas. 
+             In the medical realm, miniaturized versions are used for minimally invasive surgical procedures, enabling surgeons to reach and operate in areas that were previously inaccessible. 
+             Moreover, snake robots are utilized for inspection and maintenance tasks in industrial settings, such as examining the interior of pipelines and ducts. 
+             Their ability to explore and navigate tight spaces also makes them ideal for scientific exploration, such as spelunking and underwater research. 
+            The ongoing development of snake robots continues to push the boundaries of robotics, offering new solutions to old problems and opening up possibilities in various fields.</p><br>
+          <h3>Mechanical Design</h3>
+          <p>The snake robot is designed with modularity in mind, allowing for flexibility in its configuration and ensuring redundancy in its operation. 
+            Each module of the robot is connected perpendicularly to the next, providing a wide range of movement and enabling the robot to navigate through various terrains and obstacles.</p><br>
+          <p>The robot's design is centered around 10 degrees of freedom (DOF), which are crucial for replicating the intricate movements of a natural snake. 
+            This design choice allows the robot to perform complex maneuvers such as sidewinding, climbing, and even swimming.</p><br>
+          <h3>Manufacturing Process</h3>
+          <p>The components of the snake robot were fabricated using a Prusa i3 Mk3s Bear 3D printer, known for its precision and reliability. 
+            PETG filament was chosen for its strength and durability, ensuring that the robot can withstand the demands of various environments.</p><br>
+          <p>The manufacturing process involved careful consideration of the dimensions of the MG995 servo motors and the M3 countersunk screws, which are integral to the assembly of the robot's modules. 
+            Each module was printed with a 15% infill, striking a balance between lightweight construction and structural integrity.</p><br>
+          <h3>Control and Electronics</h3>
+          <p>The heart of the snake robot's control system is the NVIDIA Jetson Nano, a powerful and compact computer that enables advanced processing capabilities. 
+            This is complemented by the PCA9685 board, which facilitates communication between the Jetson Nano and the servo motors through I2C.</p><br>
+          <p>The servo motors, specifically the Tower Pro MG995 models, are responsible for the actuation of each joint in the robot. 
+            They are connected in parallel and powered from the tail end of the robot, ensuring a streamlined and efficient setup.</p><br>
+          <p>The control algorithms are meticulously developed to enable the robot to perform various gaits and movements, with parameters fine-tuned through both simulation and physical testing. 
+            This ensures that the robot can adapt to different terrains and complete its tasks effectively.</p><br>
+          <h3>Simulation</h3>
+          <p>To ensure the robot's movements are precise and efficient, simulations were conducted using PyBullet, a real-time physics simulator popular for its accuracy and capability in robot simulation. 
+            PyBullet provided a platform to test various gaits and movements, such as sidewinding and rotation, without the need for physical trials.</p><br>
+          <p>The Universal Robot Description Format (URDF) was used to describe the robot's joints and links, allowing for a detailed simulation of its mechanics. 
+            This process involved adjusting parameters such as joint angles, amplitudes, and offsets to mimic the natural movements of a snake.</p><br>
+          <h3>Experimental Setup</h3>
+          <p>The physical testing of the snake robot was conducted on different surfaces to evaluate its performance under various conditions. 
+            These surfaces included a plain table, cardboard, and a yoga mat, each offering different levels of friction. 
+            It was observed that the robot performed best on the plain table due to its optimal friction characteristics.</p><br>
+          <p>The experiments focused on the robot's ability to execute the gaits simulated in PyBullet. 
+            Adjustments were made to the control parameters to account for real-world factors such as friction and the weight distribution of the robot.</p><br>
+          <h3>Results</h3>
+          <p>The results of the experiments were promising, with the snake robot successfully performing the programmed gaits. 
+            The sidewinding motion, in particular, demonstrated the robot's ability to navigate laterally, a crucial aspect of its design.</p><br>
+          <p>The rotation gait allowed the robot to turn around its axis, showcasing its agility and control. 
+            The rectilinear motion, a more straightforward movement, was also achieved, highlighting the robot's versatility in locomotion.</p><br>
+          <h3>Future Work</h3>
+          <p>The next phase of development for the snake robot involves integrating reinforcement learning (RL) algorithms to enhance its autonomy and adaptability. 
+            By employing RL, the robot will be able to learn from its environment and improve its performance over time, adapting its movements to different terrains and obstacles more effectively.</p><br>
+          <p>The focus will be on developing a robust RL framework that can handle the complexity of the robot's movements and the variety of tasks it needs to perform. 
+            sThis will involve training the robot in simulated environments before transferring the learned behaviors to the physical robot.</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Deep Reinforcement Learning in Robotics</h2>
+          <p>Coming soon....</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Collision Avoidance and Path Planning for Industrial Robot</h2>
+          <p>The importance of collision-free trajectory generation lies in its potential to enhance the safety and effectiveness of robotic systems. 
+            In scenarios where robots and humans coexist, ensuring that robots can avoid collisions is paramount for preventing accidents and facilitating seamless interaction. 
+            This capability is also essential in industrial settings, where robots need to maneuver around obstacles and work in close proximity to human operators.</p><br>
+          <p>Furthermore, the principles and algorithms developed in this project have broader implications beyond human-robot interaction. 
+            They are applicable in autonomous vehicles, drone navigation, and even in surgical robotics, where precision and safety are of utmost importance. 
+            By enabling robots to intelligently plan their paths and avoid obstacles, we can unlock new possibilities in automation and robotics, paving the way for more advanced and collaborative systems.</p><br>
+          <h3>Objectives</h3>
+          <p>The main goals of this project were:</p><br>
+          <p><strong>1. Detect Collisions:</strong>Create a system that can spot potential crashes between the robot arm and obstacles.</p>
+          <p><strong>2. Plan Safe Paths:</strong>Develop methods for the robot to find and follow routes that avoid hitting anything.</p>
+          <p><strong>3. Make Path Planning Efficient:</strong>Ensure the robot can quickly make decisions without sacrificing safety.</p>
+          <p><strong>4. Improve Interaction with Humans:</strong>Build a robot that can safely work around people.</p><br>
+          <h3>Challenges</h3>
+          <p>Achieving these goals was tough because::</p><br>
+          <p><strong>1. Moving Obstacles:</strong>It's tricky for the robot to predict and dodge things that are moving.</p>
+          <p><strong>2. Speed vs. Safety:</strong> The robot needs to make fast decisions but still be safe.</p>
+          <p><strong>3. Reliable Sensors: </strong>The robot relies on accurate data from its sensors to avoid obstacles.</p>
+          <p><strong>4. Finding the Best Path: </strong>It's hard to find a path that's both safe and doesn't take too long.</p><br>
+          <h3>Methodology and implementation</h3>
+          <p>The project encompassed three principal components:</p>
+          <p><strong>Static Obstacle Detection and Avoidance:</strong></p>
+          <p>I configured the robot to detect stationary obstacles within its operational space. 
+            This involved setting up sensors and programming the robot to recognize obstacles in its path. 
+            By accurately identifying the presence of obstacles, the robot could make informed decisions about its movement. 
+            Utilizing Hermite interpolation, I devised a trajectory that would prompt the robot to halt if a potential collision was detected. 
+            This precautionary measure ensured the safety of both the robot and its surroundings, preventing any possible accidents due to collisions.</p><br>
+            <p><strong>Collision-Free Trajectory Generation for Static Obstacles:</strong></p>
+            <p>My objective was to generate trajectories that circumvent collisions with static obstacles. 
+              To achieve this, I focused on creating safe and efficient paths that the robot could follow while avoiding any obstructions in its environment. 
+              I employed the Probabilistic Road Maps (PRM) technique to construct a network of safe paths. This involved generating random configurations and connecting them to form a graph of possible paths. 
+              To identify the optimal route from the starting point to the destination, I implemented the A* search algorithm, which efficiently found the shortest path while ensuring collision avoidance.</p><br>
+            <p><strong>Collision-Free Trajectory Generation for Dynamic Obstacles:</strong></p>
+            <p>I explored strategies to navigate around moving obstacles, which presented a more complex challenge compared to static obstacles. 
+              This required the robot to dynamically adjust its path in response to the changing positions of the obstacles. 
+              Focusing on the RRT* and Temporal-PRM methods, I investigated their effectiveness in handling dynamic environments. 
+              The Temporal-PRM approach, which adapts PRM for dynamic environments by forecasting obstacle movements, proved particularly efficacious. 
+              It allowed the robot to plan its path with foresight, considering the future positions of the obstacles and adjusting its trajectory accordingly.</p><br>
+            <p>Throughout the project, I utilized MATLAB for algorithm development and V-REP for conducting simulations. 
+              This enabled me to rigorously test the robot's ability to maneuver safely in simulated environments, thereby demonstrating the viability of the proposed solutions. 
+              The successful implementation of these methodologies underscored the potential of advanced path planning techniques in enhancing the safety and efficiency of robotic systems.</p>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Stereo Visual Odometry</h2>
+          <p>Visual odometry is essential for autonomous navigation, especially in GPS-denied environments.
+             It involves estimating the position and orientation of a vehicle using images captured by onboard cameras. 
+            This technology is crucial for maintaining accurate navigation and ensuring the safety and reliability of autonomous vehicles.</p><br>
+          <p>The applications of visual odometry are diverse, including robotics for indoor navigation, augmented reality for device tracking, unmanned aerial vehicles for navigation without GPS, and space exploration for navigating extraterrestrial surfaces. 
+            Overall, visual odometry is a foundational technology that enables autonomous systems to navigate and localize in challenging environments.</p><br>
+          <p>The implementation of stereo visual odometry for the autonomous vehicle was approached with a systematic workflow, integrating ROS, Gazebo simulator, and stereo camera technology. 
+            The process can be outlined in the following steps:</p><br>
+          <p><strong>1. Simulation Environment Setup: </strong> Utilizing Gazebo, a simulation environment was created to mimic real-world scenarios, allowing for the testing and refinement of the visual odometry algorithms in a controlled setting.</p><br>
+          <p><strong>2. Stereo Camera Calibration: </strong> The stereo camera mounted on the autonomous vehicle was calibrated to determine its intrinsic parameters. This step is crucial for accurate depth estimation and image rectification.</p><br>
+          <p><strong>3. Image Aquisition: </strong> As the vehicle navigated through the simulated environment, images were continuously captured from the left and right cameras of the stereo setup.</p><br>
+          <p><strong>4. Feature Detection and Matching: </strong> Key features were detected and matched between consecutive frames of the left and right camera images. This process is vital for tracking the movement of feature points and estimating the vehicle's motion.</p><br>
+          <p><strong>5. Stereo Triangulation: </strong> The matched features, along with the camera's intrinsic parameters, were used for stereo triangulation to obtain 3D points in the environment, providing essential depth information.</p><br>
+          <p><strong>6. Pose Estimation: </strong> The relative pose (position and orientation) of the vehicle was estimated by comparing the 3D points across consecutive frames, solving a Perspective-n-Point (PnP) problem to determine the vehicle's movement.</p><br>
+          <p><strong>7. Odometry Computation: </strong> The estimated poses were accumulated over time to compute the vehicle's odometry, yielding a continuous estimate of its trajectory through the environment.</p><br>
+          <p><strong>8. Visualization: </strong>  The estimated trajectory was visualized within the simulation environment to verify the accuracy and reliability of the visual odometry system, providing insights into the system's performance.</p><br>
+
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <a href="#projects" class="close-btn">&times;</a>
+          <h2>Emotion, Age, and Gender Recognition for Human-Robot Interaction</h2>
+          <p>In this project, we tackle the challenge of developing a machine learning model that can accurately recognize human emotions, age, and gender. 
+            This is a crucial step toward enhancing human-robot interaction, as it enables robots to understand and respond to human expressions and traits in a more natural and intuitive way.</p><br>
+          <p>The model's ability to interpret complex human characteristics has significant implications across various fields. 
+            In healthcare, robots equipped with this technology can provide personalized care by understanding patient emotions. 
+            In customer service, robots can tailor their interactions based on customer demographics and emotional state. 
+            Social robots can engage with users in a more human-like manner, while educational robots can adapt their teaching methods to the age and emotional state of students. 
+            In security, this technology allows robots to identify individuals and assess potential threats based on emotions, age, and gender.</p><br>
+          <p>By addressing these challenges, this project aims to revolutionize the way humans interact with robots, making these interactions more meaningful and effective across various domains.          </p><br>
+          <a href="https://example.com/demo1" target="_blank">View Demo</a>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+      <!-- Add more modals for other projects -->
+    </section>
+    
+    
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:saisharanthirunagari@gmail.com">saisharanthirunagari@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/sai-sharan-thirunagari/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/phone.png"
+            alt="Phone icon"
+            class="icon contact-icon"
+          />
+          <p><a >+1 (716)-548-548</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p> -->
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

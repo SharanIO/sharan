@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Object Manipulation - Project Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <div id="background"></div>
+
+    <header>
+        <nav id="desktop-nav" class="smart-scroll">
+            <h1 class="logo">Sai Sharan Thirunagari</h1>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blogs">Blogs</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#end-note">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-header" class="section-padding">
+        <canvas id="particle-network-1" class="background-canvas"></canvas>
+        <div class="container">
+            <h1 class="title">Design and Development of a Robotic System for Soft Tissue Manipulation</h1>
+            <div class="tags">
+                <span class="tag">Robotics</span>
+                <span class="tag">Mechanical Design</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Biomechanics</span>
+            </div>
+            <div class="project-introduction">
+                <p class="section-description">
+                    In the world of robotics, precisely controlling force is one of our greatest challenges. 
+                    While robots excel at moving with sub-millimeter accuracy, asking them to apply just the 
+                    right amount of pressure – like a skilled therapist performing a massage – presents a 
+                    fascinating engineering puzzle. I tackled this challenge by developing a robotic system 
+                    that combines the precision of automation with the gentle touch needed for soft tissue 
+                    manipulation. Through innovative mechanical design and systematic iteration, I created an 
+                    end-effector that can apply controlled pressure across tissue surfaces while ensuring 
+                    safety and effectiveness. The system combines pneumatic actuation with passive elements, 
+                    allowing it to adapt to varying tissue properties while maintaining consistent force control.
+                </p>
+                <div class="illustration-container">
+                    <!-- Placeholder for your illustration -->
+                    <img src="./assets/Project_1_intro.gif" alt="Robotic System Concept" class="project-illustration">
+                </div>
+                <div class="project-highlights">
+                    <div class="highlight-card">
+                        <span class="highlight-number">30N</span>
+                        <span class="highlight-label">Force Control</span>
+                        <span class="highlight-context">Implemented precise force limitation system</span>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-number">4</span>
+                        <span class="highlight-label">Design Iterations</span>
+                        <span class="highlight-context">Each solving specific technical challenges</span>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-number">100%</span>
+                        <span class="highlight-label">Coverage</span>
+                        <span class="highlight-context">Achieved full surface manipulation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="challenges-and-requirements" class="section-padding">
+            <canvas id="particle-network-3" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Key Challenges & Design Requirements</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <h3>Tissue Handling</h3>
+                        <ul>
+                            <li>Apply precise, repeatable force without tissue damage</li>
+                            <li>Maximum safe force limit: 30 Newtons</li>
+                            <li>Adapt to changes in tissue shape and properties</li>
+                        </ul>
+                        <div class="illustration-container">
+                            <!-- Placeholder for your illustration -->
+                            <img src="./assets/Project_1_tissue.png" alt="Robotic System Concept" class="project-illustration">
+                        </div>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>Design Requirements</h3>
+                        <ul>
+                            <li>Cost-effective production</li>
+                            <li>Easy cleaning and sterilization</li>
+                            <li>Complete surface coverage</li>
+                            <li>Adaptability to various lung sizes/shapes</li>
+                            <li>Modular design for maintenance</li>
+                        </ul>
+                        <div class="illustration-container">
+                            <!-- Placeholder for your illustration -->
+                            <img src="./assets/Project_1_req.png" alt="Robotic System Concept" class="project-illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design-evolution" class="section-padding">
+            <canvas id="particle-network-2" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>From Concept to Reality</h2>
+                <p class="evolution-description">
+                    Translating the delicate task of tissue manipulation into a reliable robotic system required 
+                    a methodical approach to solving multiple engineering challenges. Through four major design iterations, 
+                    each focused on specific aspects of the problem, I developed a system that could effectively 
+                    balance precision, safety, and reliability.
+                </p>
+                
+                <p class="evolution-description">
+                    Each iteration brought new insights about the complex interplay between mechanical design, 
+                    force control, and tissue interaction. What began as a basic pneumatic system evolved into 
+                    a sophisticated end-effector capable of adapting to varying tissue properties while maintaining 
+                    precise force control.
+                </p>
+            </div>
+        
+            <div class="iteration-carousel">
+                <button class="arrow left-arrow">&larr;</button>
+                <div class="iteration-container">
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/Project_1_iter1.gif" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Initial Prototype</h3>
+                        <p class="challenge-text">
+                            The first challenge was establishing basic force control while ensuring the system 
+                            could interact safely with tissue surfaces. I approached this by designing a 
+                            pneumatic actuation system combined with passive joints for initial force absorption.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Innovations</h4>
+                            <ul>
+                                <li>Single-rod pneumatic actuator for controlled force application</li>
+                                <li>Basic passive joints for initial surface adaptation</li>
+                                <li>Preliminary force control implementation</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Critical Insights</h4>
+                            <p>
+                                Testing revealed the need for better surface adaptation and more uniform force 
+                                distribution across the tissue surface, guiding the next iteration's focus on 
+                                enhanced contact mechanisms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/Project_1_Iter2.gif" alt="Initial Prototype" class="design-img">
+                        
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Initial Prototype 2</h3>
+                        <p class="challenge-text">
+                            The first challenge was establishing basic force control while ensuring the system 
+                            could interact safely with tissue surfaces. I approached this by designing a 
+                            pneumatic actuation system combined with passive joints for initial force absorption.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Innovations</h4>
+                            <ul>
+                                <li>Single-rod pneumatic actuator for controlled force application</li>
+                                <li>Basic passive joints for initial surface adaptation</li>
+                                <li>Preliminary force control implementation</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Critical Insights</h4>
+                            <p>
+                                Testing revealed the need for better surface adaptation and more uniform force 
+                                distribution across the tissue surface, guiding the next iteration's focus on 
+                                enhanced contact mechanisms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/Project_1_iter3.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Initial Prototype 3</h3>
+                        <p class="challenge-text">
+                            The first challenge was establishing basic force control while ensuring the system 
+                            could interact safely with tissue surfaces. I approached this by designing a 
+                            pneumatic actuation system combined with passive joints for initial force absorption.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Innovations</h4>
+                            <ul>
+                                <li>Single-rod pneumatic actuator for controlled force application</li>
+                                <li>Basic passive joints for initial surface adaptation</li>
+                                <li>Preliminary force control implementation</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Critical Insights</h4>
+                            <p>
+                                Testing revealed the need for better surface adaptation and more uniform force 
+                                distribution across the tissue surface, guiding the next iteration's focus on 
+                                enhanced contact mechanisms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Initial Prototype 4</h3>
+                        <p class="challenge-text">
+                            The first challenge was establishing basic force control while ensuring the system 
+                            could interact safely with tissue surfaces. I approached this by designing a 
+                            pneumatic actuation system combined with passive joints for initial force absorption.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Innovations</h4>
+                            <ul>
+                                <li>Single-rod pneumatic actuator for controlled force application</li>
+                                <li>Basic passive joints for initial surface adaptation</li>
+                                <li>Preliminary force control implementation</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Critical Insights</h4>
+                            <p>
+                                Testing revealed the need for better surface adaptation and more uniform force 
+                                distribution across the tissue surface, guiding the next iteration's focus on 
+                                enhanced contact mechanisms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <button class="arrow right-arrow">&rarr;</button>
+                <!-- Additional iteration cards would follow -->
+            </div>
+        </section>
+    
+    
+        <section id="testing-validation" class="section-padding">
+            <canvas id="particle-network-4" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Testing & Validation</h2>
+                <p class="section-description">
+                    Each iteration of the design underwent rigorous testing to validate its performance 
+                    and identify areas for improvement. These tests provided crucial insights that guided 
+                    the evolution of the system.
+                </p>
+                
+                <div class="test-cases-carousel">
+                    <button class="arrow left-arrow">&larr;</button>
+                    <div class="test-cases-container">
+                        <div class="test-case">
+                            <div class="test-video">
+                                <video controls>
+                                    <source src="path_to_video" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="test-description">
+                                <h3>Force Application Test</h3>
+                                <p>Validation of the passive compliance mechanism showing uniform force distribution across tissue surface.</p>
+                            </div>
+                        </div>
+                        <!-- Additional test cases would follow -->
+                    </div>
+                    <button class="arrow right-arrow">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-development" class="section-padding">
+            <canvas id="particle-network-5" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Advanced Development</h2>
+                <p class="section-description">
+                    Building upon our initial success with the passive end-effector, we explored advanced 
+                    techniques for improving tissue manipulation through 3D modeling and robotic integration.
+                </p>
+        
+                <div class="development-stages">
+                    <div class="stage-card">
+                        <h3>3D Tissue Modeling</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <div class="point-cloud-demo">
+                                    <!-- Interactive point cloud visualization would go here -->
+                                    <img src="./assets/3d_modelling.png" alt="Point Cloud Visualization">
+                                </div>
+                            </div>
+                            <div class="stage-details">
+                                <p>Using an Intel RealSense camera, we captured detailed point cloud data 
+                                of lung tissue to understand its structural properties and design optimal 
+                                fixturing solutions.</p>
+                                <ul class="process-steps">
+                                    <li>Data Collection</li>
+                                    <li>Point Cloud Processing</li>
+                                    <li>Surface Reconstruction</li>
+                                    <li>Fixture Design Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="stage-card">
+                        <h3>Robotic Integration</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <div class="test-video">
+                                    <div class="video-container">
+                                        <iframe width="1083" height="609" 
+                                        src="https://www.youtube.com/embed/80Q5OwTP514" 
+                                        title="Final demo gripper" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stage-details">
+                                <p>The passive end-effector was integrated with a Powerball Schunk 6-DOF 
+                                robot to explore advanced manipulation capabilities.</p>
+                                <div class="specs-container">
+                                    <h4>System Specifications</h4>
+                                    <ul class="specs-list">
+                                        <li>Robot: Powerball Schunk 6-DOF</li>
+                                        <li>End-Effector: Custom Passive Design</li>
+                                        <li>Control System: ROS Integration</li>
+                                        <li>Workspace: Adaptable to Various Tissue Sizes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- <div class="stage-card">
+                        <h3>Future Direction: Parametric Trajectory Planning</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <img src="path_to_trajectory_image" alt="Parametric Trajectory Concept">
+                            </div>
+                            <div class="stage-details">
+                                <p>Proposed development of adaptive trajectories based on point cloud data 
+                                for optimized tissue manipulation.</p>
+                                <div class="concept-illustration">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="impact-scope" class="section-padding">
+            <canvas id="particle-network-6" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Impact & Future Scope</h2>
+                <p class="impact-introduction">
+                    This research in soft tissue manipulation extends far beyond its initial application 
+                    in surfactant extraction. By developing novel approaches to gentle and precise tissue 
+                    manipulation, we've opened doors to numerous applications in healthcare, biotechnology, 
+                    and beyond.
+                </p>
+        
+                <div class="impact-areas">
+                    <div class="impact-card medical">
+                        <div class="impact-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Medical Applications</h3>
+                        <div class="impact-content">
+                            <p>The gentle manipulation techniques developed in this research could revolutionize 
+                            minimally invasive surgery and therapeutic procedures. Our approach to force control 
+                            and tissue interaction provides a framework for safer and more effective medical 
+                            robotics.</p>
+                            <div class="potential-applications">
+                                <span>Surgical Assistance</span>
+                                <span>Physical Therapy</span>
+                                <span>Tissue Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="impact-card research">
+                        <div class="impact-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Research Innovation</h3>
+                        <div class="impact-content">
+                            <p>Our methodologies for adaptive manipulation and force control contribute to the 
+                            broader field of soft robotics research. The integration of passive compliance with 
+                            active control opens new avenues for human-robot interaction and delicate material 
+                            handling.</p>
+                            <div class="potential-applications">
+                                <span>Soft Robotics</span>
+                                <span>Biomechanics</span>
+                                <span>Control Systems</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="impact-card industrial">
+                        <div class="impact-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial Applications</h3>
+                        <div class="impact-content">
+                            <p>The principles developed for gentle tissue manipulation can be adapted for 
+                            handling delicate materials in manufacturing and quality control processes, 
+                            enabling automation of tasks that previously required human touch.</p>
+                            <div class="potential-applications">
+                                <span>Delicate Assembly</span>
+                                <span>Quality Testing</span>
+                                <span>Material Handling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="future-directions">
+                    <h3>Future Directions</h3>
+                    <div class="direction-grid">
+                        <div class="direction-card">
+                            <h4>Enhanced Sensing</h4>
+                            <p>Integration of advanced force and tactile sensors could enable even more 
+                            precise and adaptive manipulation capabilities.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h4>Machine Learning Integration</h4>
+                            <p>Developing AI-driven control systems could optimize manipulation strategies 
+                            based on real-time tissue response.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h4>Expanded Applications</h4>
+                            <p>Adapting the technology for various medical procedures and industrial 
+                            processes requiring gentle material handling.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="closing-statement">
+                    <p>As we continue to advance this technology, the potential for improving healthcare 
+                    procedures, research capabilities, and industrial processes grows exponentially. This 
+                    project represents not just a solution to a specific challenge, but a stepping stone 
+                    toward more sophisticated and gentle robotic interaction with soft materials.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-tools" class="section-padding">
+            <canvas id="particle-network-7" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Tools & Technologies</h2>
+                <p class="section-description">
+                    This project leveraged a comprehensive set of engineering tools and technologies, 
+                    combining mechanical design software, robotics frameworks, and 3D perception tools 
+                    to create an effective solution for soft tissue manipulation.
+                </p>
+        
+                <div class="tools-grid">
+                    <!-- Mechanical Design -->
+                    <div class="tool-item">
+                        <img src="assets/solidworks-icon.png" alt="SolidWorks icon">
+                        <h4>SolidWorks</h4>
+                        <p>3D CAD Design & Simulation</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/fusion360-icon.png" alt="Fusion 360 icon">
+                        <h4>Fusion 360</h4>
+                        <p>Rapid Prototyping & Design</p>
+                    </div>
+        
+                    <!-- Manufacturing -->
+                    <div class="tool-item">
+                        <img src="assets/3dprinting-icon.png" alt="3D Printing icon">
+                        <h4>3D Printing</h4>
+                        <p>Prototype Fabrication</p>
+                    </div>
+        
+                    <!-- Robotics & Control -->
+                    <div class="tool-item">
+                        <img src="assets/ros-icon.png" alt="ROS icon">
+                        <h4>ROS</h4>
+                        <p>Robot Operating System</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/python-icon.png" alt="Python icon">
+                        <h4>Python</h4>
+                        <p>Control System Development</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/c++-icon.png" alt="C++ icon">
+                        <h4>C++</h4>
+                        <p>Robot Control Implementation</p>
+                    </div>
+        
+                    <!-- Perception -->
+                    <div class="tool-item">
+                        <img src="assets/pcl-icon.png" alt="PCL icon">
+                        <h4>Point Cloud Library</h4>
+                        <p>3D Data Processing</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/realsense-icon.png" alt="RealSense icon">
+                        <h4>Intel RealSense</h4>
+                        <p>3D Scanning & Perception</p>
+                    </div>
+        
+                    <!-- Analysis -->
+                    <div class="tool-item">
+                        <img src="assets/matlab-icon.png" alt="MATLAB icon">
+                        <h4>MATLAB</h4>
+                        <p>Data Analysis & Simulation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footnote">
+        <div class="container">
+            <div class="footnote-content">
+                <p class="copyright">© 2025 Sai Sharan Thirunagari. All rights reserved.</p>
+                <p class="tagline">Innovating at the intersection of robotics and artificial intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

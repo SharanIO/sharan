@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancing Spot Robot's Capabilities: My Journey in Autonomous Object Detection and Retrieval</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <div id="background"></div>
+
+    <header>
+        <nav id="desktop-nav" class="smart-scroll">
+            <h1 class="logo">Sai Sharan Thirunagari</h1>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blogs">Blogs</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#end-note">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-header" class="section-padding">
+        <canvas id="particle-network-1" class="background-canvas"></canvas>
+        <div class="container">
+            <h1 class="title">Enhancing Spot Robot's Capabilities: My Journey in Autonomous Object Detection and Retrieval</h1>
+            <div class="tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Robot Navigation</span>
+                <span class="tag">Object Manipulation</span>
+                <span class="tag">ROS</span>
+                <span class="tag">Gazebo</span>
+            </div>
+            <div class="project-introduction">
+                <p class="section-description">
+                    In today's fast-paced world, robots are increasingly becoming valuable teammates in various industries. 
+                    This project explores how we can make Boston Dynamics' Spot robot even more useful by giving it the ability to find and retrieve objects on its own.
+                </p>
+                <p class="section-description">
+                    Imagine walking into a warehouse where Spot is quietly at work, identifying misplaced items and returning them to their proper locations. 
+                    Or picture a scenario where Spot assists in a search operation, locating important objects in areas that might be challenging for humans to access.
+                </p>
+                <p class="section-description">
+                    My project focused on improving two key aspects of Spot's functionality: its 'eyes' and its 'brain'. 
+                    I worked on upgrading its vision system for accurate object detection and enhancing its navigation skills for efficient movement in various environments. By combining these improvements, I aimed to create a more capable and independent robot that could handle tasks with minimal human input.
+                </p>
+                <p class="section-description">
+                    As you explore this project, you'll see how I tackled real-world challenges in computer vision and robotics, developing practical solutions that could make a difference in industries ranging from logistics to emergency services.
+                </p>
+                <div class="illustration-container">
+                    <!-- Placeholder for your illustration -->
+                    <img src="./assets/Project_4_intro.gif" alt="Robotic System Concept" class="project-illustration">
+                </div>
+                <div class="project-highlights">
+                    <div class="highlight-card">
+                        <span class="highlight-number">10</span>
+                        <span class="highlight-label">Degrees of Freedom</span>
+                        <span class="highlight-context">Enabling complex snake-like movements</span>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-number">3</span>
+                        <span class="highlight-label">Movement Patterns</span>
+                        <span class="highlight-context">Sidewinding, Lateral, and Linear motion</span>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-number">NVIDIA</span>
+                        <span class="highlight-label">Jetson Nano</span>
+                        <span class="highlight-context">Advanced onboard processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="challenges-and-requirements" class="section-padding">
+            <canvas id="particle-network-3" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Key Challenges & Design Requirements</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <h3>Real-time Object Detection</h3>
+                        <p>Developing a fast, accurate system to identify objects using Spot's cameras in varying environments posed a significant challenge. This required optimizing detection algorithms to work efficiently with Spot's hardware.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>3D Localization</h3>
+                        <p>Accurately determining the 3D position of detected objects using depth data from Spot's cameras required careful calibration and precise calculations to ensure reliable object retrieval.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>System Integration</h3>
+                        <p>Seamlessly merging the new object detection and localization capabilities with Spot's existing navigation systems required deep understanding of Spot's API and ROS architecture.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>Design Requirements</h3>
+                        <ul>
+                            <li>Accuracy: Achieve high precision in object detection and localization.</li>
+                            <li>Speed: Ensure real-time performance for smooth operation.</li>
+                            <li>Adaptability: Function consistently across various environments.</li>
+                            <li>Safety: Implement robust collision avoidance measures.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design-evolution" class="section-padding">
+            <canvas id="particle-network-2" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>From Concept to Reality</h2>
+                <p class="evolution-description">
+                    Developing an autonomous object detection and retrieval system for the Spot robot was an iterative journey of innovation and problem-solving. 
+                    This section takes you through the key stages of the project's evolution, from the initial prototype to the final optimized system. Each phase brought new challenges and insights, shaping not only the technical implementation but also my approach to complex robotics problems. 
+                    As you explore this timeline, you'll see how each iteration built upon the last, culminating in a robust, efficient solution that pushes the boundaries of what Spot can do.
+                </p>
+            </div>
+        
+            <div class="iteration-carousel">
+                <button class="arrow left-arrow">&larr;</button>
+                <div class="iteration-container">
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/Full_assembly_1.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Initial Prototype</h3>
+                        <p class="challenge-text">
+                            In the first phase of the project, I focused on establishing a basic object detection system using Spot's onboard cameras. 
+                            I implemented an SSD ResNet model for object detection, which provided a foundation for further development. 
+                            This initial prototype allowed me to identify key areas for improvement, particularly in processing speed and integration with Spot's existing systems.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Specifications</h4>
+                            <ul>
+                                <li>Chose SSD ResNet for its balance of accuracy and speed in object detection</li>
+                                <li>Utilized Spot's native camera API to access raw image data</li>
+                                <li>Implemented initial processing pipeline using OpenCV and TensorFlow</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons learned</h4>
+                            <p>
+                                Real-world robotics applications require careful balancing of accuracy and computational efficiency. 
+                                The initial prototype revealed the importance of optimizing for Spot's specific hardware constraints.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Enhancing Detection Accuracy</h3>
+                        <p class="challenge-text">
+                            Building on the initial prototype, I turned my attention to improving the accuracy of the object detection system. 
+                            By fine-tuning the SSD ResNet model with a dataset of over 3,000 annotated images from Spot's cameras, 
+                            I was able to significantly enhance the system's ability to identify objects in various lighting conditions and environments. 
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Specifications</h4>
+                            <ul>
+                                <li>Employed transfer learning techniques to fine-tune the pre-trained SSD ResNet model</li>
+                                <li>Developed a custom data augmentation pipeline to increase dataset diversity</li>
+                                <li>Implemented cross-validation to ensure model generalization</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons learned</h4>
+                            <p>
+                                The power of transfer learning in rapidly improving model performance became evident. 
+                                Additionally, I gained insight into the critical role of diverse, domain-specific training data in creating robust computer vision systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Implementing 3D Localization</h3>
+                        <p class="challenge-text">
+                            The next major step was developing the 3D localization capability. 
+                            I leveraged the depth data from Spot's cameras and combined it with the 2D detection results to calculate the precise 3D coordinates of detected objects. 
+                            This process involved careful calibration of the camera parameters and development of algorithms to transform the depth information into Spot's coordinate system. 
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <li>Used camera intrinsic and extrinsic parameters for accurate 3D projection</li>
+                                <li>Implemented a depth filtering algorithm to reduce noise in 3D estimations</li>
+                                <li>Developed a coordinate transformation system to align camera and robot frames</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons learned</h4>
+                            <p>
+                                Accurate 3D localization requires a deep understanding of both computer vision principles and robotic kinematics. 
+                                The importance of precise camera calibration in 3D vision applications became clear during this phase.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Integrating with Spot's Navigation</h3>
+                        <p class="challenge-text">
+                            With object detection and 3D localization in place, the focus shifted to integrating these new capabilities with Spot's existing navigation systems. 
+                            This required a deep dive into Spot's API and the ROS wrapper. 
+                            I developed a system that could translate the 3D object coordinates into waypoints for Spot's navigation system, enabling autonomous movement towards detected objects. 
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <li>Utilized ROS topics and services for modular communication between components</li>
+                                <li>Implemented a state machine to manage different phases of object detection.</li>
+                                <li>Developed a custom ROS node to interface between our perception system and Spot's navigation stack</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons learned</h4>
+                            <p>
+                                Integrating custom perception systems with existing robotic platforms requires a thorough understanding of both the platform's capabilities and limitations. 
+                                The modular nature of ROS proved invaluable in managing complex robotic systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Optimizing for Real-time Performance</h3>
+                        <p class="challenge-text">
+                            Throughout the development process, ensuring real-time performance was a constant challenge. In this final phase, I focused on optimizing the entire pipeline for speed and efficiency. 
+                            This involved refining the object detection model to run more efficiently on Spot's hardware, streamlining the 3D localization calculations, and optimizing the communication between different components of the system. 
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <!-- <li>Implemented model quantization to reduce the computational load of the object detection network</li> -->
+                                <li>Utilized multi-threading to parallelize perception and navigation tasks</li>
+                                <li>Optimized ROS message passing to reduce communication overhead</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons learned</h4>
+                            <p>
+                                Real-time performance in robotics often requires a holistic approach to optimization, considering everything from algorithm efficiency to system architecture. 
+                                The importance of profiling and benchmarking in identifying performance bottlenecks became evident.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <button class="arrow right-arrow">&rarr;</button>
+                <!-- Additional iteration cards would follow -->
+            </div>
+        </section>
+    
+    
+        <section id="testing-validation" class="section-padding">
+            <canvas id="particle-network-4" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Testing & Validation</h2>
+                <p class="section-description">
+                    In this section, we'll dive into how I rigorously tested and validated the autonomous object detection and retrieval system I developed for the Spot robot. While the testing process was comprehensive, 
+                    I'll focus on the key aspects that demonstrate the system's effectiveness and reliability.
+                </p>
+                
+                <div class="test-cases-carousel">
+                    <button class="arrow left-arrow">&larr;</button>
+                    <div class="test-cases-container">
+                        <div class="test-case">
+                            <div class="test-video">
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/zC9AAWMY2GU?rel=0"
+                                        title="Spot Robot Demo"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen="true">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="test-description">
+                                <h3>Demonstration</h3>
+                                <p>This brief video captures the culmination of my work on autonomous object detection and retrieval using the Spot robot. 
+                                    In just a few seconds, you'll see Spot perform a complete cycle of detecting, localizing, and approaching a target object.</p>
+                            </div>
+                        </div>
+                        <!-- Additional test cases would follow -->
+                    </div>
+                    <button class="arrow right-arrow">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="advanced-development" class="section-padding">
+            <canvas id="particle-network-5" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Advanced Development</h2>
+                <p class="section-description">
+                    Building upon our initial success with the passive end-effector, we explored advanced 
+                    techniques for improving tissue manipulation through 3D modeling and robotic integration.
+                </p>
+        
+                <div class="development-stages">
+                    <div class="stage-card">
+                        <h3>3D Tissue Modeling</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <div class="point-cloud-demo">
+                                    
+                                    <img src="path_to_point_cloud_image" alt="Point Cloud Visualization">
+                                </div>
+                            </div>
+                            <div class="stage-details">
+                                <p>Using an Intel RealSense camera, we captured detailed point cloud data 
+                                of lung tissue to understand its structural properties and design optimal 
+                                fixturing solutions.</p>
+                                <ul class="process-steps">
+                                    <li>Data Collection</li>
+                                    <li>Point Cloud Processing</li>
+                                    <li>Surface Reconstruction</li>
+                                    <li>Fixture Design Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="stage-card">
+                        <h3>Robotic Integration</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <img src="path_to_robot_image" alt="6-DOF Robot Integration">
+                            </div>
+                            <div class="stage-details">
+                                <p>The passive end-effector was integrated with a Powerball Schunk 6-DOF 
+                                robot to explore advanced manipulation capabilities.</p>
+                                <div class="specs-container">
+                                    <h4>System Specifications</h4>
+                                    <ul class="specs-list">
+                                        <li>Robot: Powerball Schunk 6-DOF</li>
+                                        <li>End-Effector: Custom Passive Design</li>
+                                        <li>Control System: ROS Integration</li>
+                                        <li>Workspace: Adaptable to Various Tissue Sizes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="stage-card">
+                        <h3>Future Direction: Parametric Trajectory Planning</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                
+                                <img src="path_to_trajectory_image" alt="Parametric Trajectory Concept">
+                            </div>
+                            <div class="stage-details">
+                                <p>Proposed development of adaptive trajectories based on point cloud data 
+                                for optimized tissue manipulation.</p>
+                                <div class="concept-illustration">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+        <section id="impact-scope" class="section-padding">
+            <canvas id="particle-network-6" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Impact & Future Scope</h2>
+                <p class="impact-introduction">
+                    The autonomous object detection and retrieval system I've developed for the Spot robot has significant implications for various industries and applications. 
+                    Let's explore the potential impact of this work and its future scope:
+                </p>
+        
+                <div class="impact-areas">
+                    <div class="impact-card medical">
+                        <div class="impact-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial Applications</h3>
+                        <div class="impact-content">
+                            <p>This system could revolutionize warehouse operations and inventory management. 
+                                Imagine Spot robots efficiently navigating large warehouses, identifying misplaced items, and returning them to their correct locations. 
+                                This could dramatically reduce human error, increase efficiency, and allow human workers to focus on more complex tasks. In manufacturing environments, Spot could be used to locate and retrieve specific components, streamlining the production process.</p>
+                            <div class="potential-applications">
+                                <span>Surgical Assistance</span>
+                                <span>Physical Therapy</span>
+                                <span>Tissue Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="impact-card research">
+                        <div class="impact-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Search and Rescue Operations</h3>
+                        <div class="impact-content">
+                            <p>The object detection and retrieval capabilities I've developed could be invaluable in search and rescue scenarios. 
+                                Spot robots equipped with this system could be deployed in disaster areas to locate important items or even identify specific markers that might indicate the presence of survivors. 
+                                The ability to navigate complex, potentially hazardous environments autonomously makes Spot an ideal assistant in these high-stakes situations.</p>
+                            <div class="potential-applications">
+                                <span>Soft Robotics</span>
+                                <span>Biomechanics</span>
+                                <span>Control Systems</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="impact-card industrial">
+                        <div class="impact-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare and Sanitization</h3>
+                        <div class="impact-content">
+                            <p>In the wake of global health concerns, there's an increased need for autonomous systems in healthcare settings. 
+                                Spot, with its object detection and retrieval capabilities, could be used to collect and dispose of potentially contaminated items in hospitals or public spaces, reducing the risk to human workers. 
+                                The system could also be adapted to identify and retrieve specific medical equipment, improving efficiency in busy healthcare environments.</p>
+                            <div class="potential-applications">
+                                <span>Delicate Assembly</span>
+                                <span>Quality Testing</span>
+                                <span>Material Handling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="future-directions">
+                    <h3>Future Directions</h3>
+                    <div class="direction-grid">
+                        <div class="direction-card">
+                            <h4>Manipulation Integration:</h4>
+                            <p>Extending the current system to work seamlessly with Spot's manipulation capabilities, allowing for more complex interactions with detected objects. 
+                                This would involve developing precise grasp planning and execution algorithms.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h4>Human-Robot Collaboration</h4>
+                            <p>Implementing intuitive interfaces for human operators to guide Spot's actions when needed, potentially through natural language processing or gesture recognition systems.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h4>Multi-Robot Coordination</h4>
+                            <p>Exploring the potential for multiple Spot robots to work together on complex tasks, which would require developing distributed planning and coordination algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="closing-statement">
+                    <p>This project has been a journey of discovery, pushing the boundaries of what's possible with autonomous robotic systems. 
+                        While there's still much to explore and improve, the foundation laid here opens up exciting possibilities for the future of robotics. 
+                        From enhancing industrial efficiency to aiding in critical search and rescue operations, the potential applications of this technology are vast and impactful. 
+                        As we continue to refine and expand these capabilities, we move closer to a world where robots like Spot can seamlessly assist humans in tackling complex, real-world challenges. 
+                        The road ahead is filled with opportunities for innovation, and I'm excited to be part of this evolving field of robotics and artificial intelligence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-tools" class="section-padding">
+            <canvas id="particle-network-7" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Tools & Technologies</h2>
+                <p class="section-description">
+                    This project leveraged a comprehensive set of engineering tools and technologies, 
+                    combining mechanical design software, robotics frameworks, and 3D perception tools 
+                    to create an effective solution for soft tissue manipulation.
+                </p>
+        
+                <div class="tools-grid">
+                    <!-- Mechanical Design -->
+                    <div class="tool-item">
+                        <img src="assets/solidworks-icon.png" alt="SolidWorks icon">
+                        <h4>SolidWorks</h4>
+                        <p>3D CAD Design & Simulation</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/fusion360-icon.png" alt="Fusion 360 icon">
+                        <h4>Fusion 360</h4>
+                        <p>Rapid Prototyping & Design</p>
+                    </div>
+        
+                    <!-- Manufacturing -->
+                    <div class="tool-item">
+                        <img src="assets/3dprinting-icon.png" alt="3D Printing icon">
+                        <h4>3D Printing</h4>
+                        <p>Prototype Fabrication</p>
+                    </div>
+        
+                    <!-- Robotics & Control -->
+                    <div class="tool-item">
+                        <img src="assets/ros-icon.png" alt="ROS icon">
+                        <h4>ROS</h4>
+                        <p>Robot Operating System</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/python-icon.png" alt="Python icon">
+                        <h4>Python</h4>
+                        <p>Control System Development</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/c++-icon.png" alt="C++ icon">
+                        <h4>C++</h4>
+                        <p>Robot Control Implementation</p>
+                    </div>
+        
+                    <!-- Perception -->
+                    <div class="tool-item">
+                        <img src="assets/pcl-icon.png" alt="PCL icon">
+                        <h4>Point Cloud Library</h4>
+                        <p>3D Data Processing</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/realsense-icon.png" alt="RealSense icon">
+                        <h4>Intel RealSense</h4>
+                        <p>3D Scanning & Perception</p>
+                    </div>
+        
+                    <!-- Analysis -->
+                    <div class="tool-item">
+                        <img src="assets/matlab-icon.png" alt="MATLAB icon">
+                        <h4>MATLAB</h4>
+                        <p>Data Analysis & Simulation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footnote">
+        <div class="container">
+            <div class="footnote-content">
+                <p class="copyright">© 2025 Sai Sharan Thirunagari. All rights reserved.</p>
+                <p class="tagline">Innovating at the intersection of robotics and artificial intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

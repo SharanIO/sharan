@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Human-Robot Interaction: A Comprehensive Approach to Safe and Efficient Manipulation using the Kinova Gen3 Robotic Arm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <div id="background"></div>
+
+    <header>
+        <nav id="desktop-nav" class="smart-scroll">
+            <h1 class="logo">Sai Sharan Thirunagari</h1>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blogs">Blogs</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#end-note">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-header" class="section-padding">
+        <canvas id="particle-network-1" class="background-canvas"></canvas>
+        <div class="container">
+            <h1 class="title">Advanced Human-Robot Interaction: A Comprehensive Approach to Safe and Efficient Manipulation using the Kinova Gen3 Robotic Arm</h1>
+            <div class="tags">
+                <span class="tag">Human-Robot Interaction</span>
+                <span class="tag">Vicon Motion Capture</span>
+                <span class="tag">Robotic Manipulation</span>
+                <span class="tag">Trajectory Planning</span>
+                <span class="tag">Collision Avoidance</span>
+                <span class="tag">ROS</span>
+                <span class="tag">Gazebo</span>
+                <span class="tag">PyBullet</span>
+            </div>
+            <div class="project-introduction">
+                <p class="section-description">
+                    In the rapidly evolving landscape of robotics, the challenge of creating systems that can work safely and efficiently alongside humans remains at the forefront of technological innovation. This project addresses this critical challenge by developing an advanced robotic system centered around the Kinova Gen3 robotic arm, designed to perform complex pick-and-place tasks while maintaining a high degree of environmental awareness and safety.
+                </p>
+                <p class="section-description">
+                    Modern manufacturing and industrial environments demand increasingly flexible automation solutions that can adapt to dynamic conditions while maintaining strict safety standards. Through the integration of precise motion capture technology with robust planning algorithms, this project explores practical approaches to creating more versatile robotic systems that can operate efficiently in semi-structured industrial environments. The goal is to enhance existing automation capabilities by enabling robots to work more effectively within shared spaces, potentially improving throughput and safety across various industrial applications.
+                </p>
+                <div class="illustration-container">
+                    <!-- Placeholder for your illustration -->
+                    <img src="./assets/Project_3_intro.png" alt="Robotic System Concept" class="project-illustration">
+                </div>
+                <div class="project-highlights">
+                    <div class="highlight-card">
+                        <span class="highlight-number">4</span>
+                        <span class="highlight-label">Research Objectives</span>
+                        <span class="highlight-context">Comprehensive system development approach</span>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-number">Vicon</span>
+                        <span class="highlight-label">Motion Capture</span>
+                        <span class="highlight-context">High-precision environmental sensing</span>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-number">Kinova</span>
+                        <span class="highlight-label">Gen3 Arm</span>
+                        <span class="highlight-context">Advanced robotic manipulation platform</span
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="challenges-and-requirements" class="section-padding">
+            <canvas id="particle-network-3" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Challenges & Design Requirements</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <h3>Real-Time Workspace Monitoring</h3>
+                        <p>Integrating motion capture data from multiple tracked objects and workers in real-time presents significant technical hurdles. The system must process and respond to this spatial information with minimal latency while maintaining accuracy - a challenge that grows with the number of tracked elements in the workspace.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>Motion Planning Pipeline</h3>
+                        <p>Creating a robust pipeline that can efficiently process environmental data, generate appropriate trajectories, and execute movements requires careful consideration of computational resources and system architecture. The challenge lies in balancing the speed of planning with the complexity required for safe operation.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>Dynamic Environment Adaptation</h3>
+                        <p>Industrial environments are rarely static, with frequent changes in object positions and human movements. Developing a system that can quickly adapt its behavior while maintaining both safety constraints and operational efficiency presents a complex engineering challenge.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>Design Requirements</h3>
+                        <ul>
+                            <li>Advanced manipulation capabilities with high degrees of freedom for complex task execution and obstacle avoidance</li>
+                            <li>Real-time processing architecture with minimal latency for responsive operation in dynamic environments</li>
+                            <li>Comprehensive testing and validation framework to ensure safety and reliability</li>
+                            <li>Modular system architecture to support integration across various industrial applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design-evolution" class="section-padding">
+            <canvas id="particle-network-2" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>From Concept to Reality</h2>
+                <p class="evolution-description">
+                    The development of our robotic manipulation system followed a systematic approach, evolving through several key stages. Each stage built upon lessons learned from the previous iteration, ultimately creating a robust and reliable system for human-robot collaboration.
+                </p>
+            </div>
+        
+            <div class="iteration-carousel">
+                <button class="arrow left-arrow">&larr;</button>
+                <div class="iteration-container">
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/Full_assembly_1.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Foundation - Hardware Integration</h3>
+                        <p class="challenge-text">
+                            The integration challenge lies in bridging high-precision Vicon motion capture with the Kinova Gen3 robotic arm. The dual-machine architecture, mirroring industrial automation systems, connects Windows-based sensing with Ubuntu-powered robot control. Through precise calibration and workspace mapping, thus establishing a unified coordinate system enabling seamless operation.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <li>Strategic camera placement for optimal workspace coverage</li>
+                                <li>Rigid mounting system design to maintain calibration stability</li>
+                                <li>Network architecture optimized for minimal latency</li>
+                                <li>Physical workspace layout maximizing operational efficiency</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons & Impact</h4>
+                            <p>
+                                Initial testing revealed the importance of robust time synchronization between systems and the need for careful consideration of network topology to maintain real-time performance - lessons that parallel challenges faced in Industry 4.0 implementations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Software Architecture Development</h3>
+                        <p class="challenge-text">
+                            The software architecture creates a seamless pipeline from perception to action. Environmental data flows through a publisher-subscriber framework - similar to industrial SCADA systems, feeding both simulation and control systems. PyBullet provides a virtual twin for validation and planning, while standardized protocols ensure robust communication between all components.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <li>Modular architecture enabling independent component testing</li>
+                                <li>Multi-threaded design for parallel processing of sensor data and robot control</li>
+                                <li>Implementation of a shared memory architecture for low-latency data access</li>
+                                <li>Use of standardized communication protocols for system interoperability</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons & Impact</h4>
+                            <p>
+                                Development revealed the critical importance of proper coordinate frame management and the need for robust error handling in cross-platform communication - challenges commonly encountered in integrated manufacturing systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Motion Planning Integration</h3>
+                        <p class="challenge-text">
+                            Our motion planning leverages a sampling-based approach using PRM to create a navigable roadmap of the robot's configuration space. Once this roadmap is established, A* search finds optimal paths through the generated graph. This combination enables efficient planning in high-dimensional spaces while maintaining path optimality - a strategy similar to how automated storage and retrieval systems (AS/RS) handle complex warehouse navigation.
+The system decomposes pick-and-place operations into six precise stages, ensuring controlled execution and safety at each step.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <li>PRM for efficient configuration space sampling</li>
+                                <li>A* search for optimal path finding through the roadmap</li>
+                                <li>Six-stage task decomposition for structured manipulation</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons & Impact</h4>
+                            <p>
+                                Experience showed the crucial balance between roadmap density and computational efficiency - a challenge familiar to developers of flexible manufacturing systems requiring rapid replanning capabilities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="iteration-card">
+                    <div class="iteration-visual">
+                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <!-- Consider using a carousel here to show multiple views -->
+                    </div>
+                    <div class="iteration-content">
+                        <h3>Control System Refinement</h3>
+                        <p class="challenge-text">
+                            The control system translates planned trajectories into precise robot movements through time-parameterized waypoints. The system, reminiscent of CNC machine controllers, maintains specified velocities while executing complex paths. While currently operating in open-loop control, future integration of force-torque sensors and joint encoders would enable advanced impedance control - similar to collaborative robots in automotive assembly.
+                        </p>
+                        <div class="key-features">
+                            <h4>Key Decisions</h4>
+                            <ul>
+                                <li>Time-parameterized trajectory execution</li>
+                                <li>Network-optimized command transmission</li>
+                                <li>Extensible architecture for sensor integration</li>
+                            </ul>
+                        </div>
+                        <div class="iteration-learnings">
+                            <h4>Lessons & Impact</h4>
+                            <p>
+                                Implementation highlighted the need for robust error handling and the potential benefits of proprioceptive sensing - insights that align with industrial robotics' evolution toward more adaptive control systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <button class="arrow right-arrow">&rarr;</button>
+                <!-- Additional iteration cards would follow -->
+            </div>
+        </section>
+    
+    
+        <section id="testing-validation" class="section-padding">
+            <canvas id="particle-network-4" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Demonstrating the System</h2>
+                <p class="section-description">
+                    Our testing approach combines detailed simulation validation with real-world demonstration, providing comprehensive verification of the system's capabilities. Let's explore how the system performs across different scenarios and environments.
+                </p>
+                
+                <div class="test-cases-carousel">
+                    <button class="arrow left-arrow">&larr;</button>
+                    <div class="test-cases-container">
+                        <div class="test-case">
+                            <div class="test-video">
+                                <div class="video-container">
+                                    <iframe width="1083" height="609" 
+                                    src="https://www.youtube.com/embed/JW3HnT3KIb8" 
+                                    title="Kinova Gen3 Robot" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="test-description">
+                                <h3>Physical Implementation</h3>
+                                <p>Moving from simulation to reality, we demonstrate the system's performance on the actual Kinova Gen3 platform. The physical implementation validates our integrated approach to sensing, planning, and control.</p>
+                            </div>
+                        </div>
+                        <!-- Additional test cases would follow -->
+                    </div>
+                    <button class="arrow right-arrow">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="advanced-development" class="section-padding">
+            <canvas id="particle-network-5" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Advanced Development</h2>
+                <p class="section-description">
+                    Building upon our initial success with the passive end-effector, we explored advanced 
+                    techniques for improving tissue manipulation through 3D modeling and robotic integration.
+                </p>
+        
+                <div class="development-stages">
+                    <div class="stage-card">
+                        <h3>3D Tissue Modeling</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <div class="point-cloud-demo">
+                                    <img src="path_to_point_cloud_image" alt="Point Cloud Visualization">
+                                </div>
+                            </div>
+                            <div class="stage-details">
+                                <p>Using an Intel RealSense camera, we captured detailed point cloud data 
+                                of lung tissue to understand its structural properties and design optimal 
+                                fixturing solutions.</p>
+                                <ul class="process-steps">
+                                    <li>Data Collection</li>
+                                    <li>Point Cloud Processing</li>
+                                    <li>Surface Reconstruction</li>
+                                    <li>Fixture Design Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="stage-card">
+                        <h3>Robotic Integration</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                                <img src="path_to_robot_image" alt="6-DOF Robot Integration">
+                            </div>
+                            <div class="stage-details">
+                                <p>The passive end-effector was integrated with a Powerball Schunk 6-DOF 
+                                robot to explore advanced manipulation capabilities.</p>
+                                <div class="specs-container">
+                                    <h4>System Specifications</h4>
+                                    <ul class="specs-list">
+                                        <li>Robot: Powerball Schunk 6-DOF</li>
+                                        <li>End-Effector: Custom Passive Design</li>
+                                        <li>Control System: ROS Integration</li>
+                                        <li>Workspace: Adaptable to Various Tissue Sizes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="stage-card">
+                        <h3>Future Direction: Parametric Trajectory Planning</h3>
+                        <div class="stage-content">
+                            <div class="visualization">
+                               
+                                <img src="path_to_trajectory_image" alt="Parametric Trajectory Concept">
+                            </div>
+                            <div class="stage-details">
+                                <p>Proposed development of adaptive trajectories based on point cloud data 
+                                for optimized tissue manipulation.</p>
+                                <div class="concept-illustration">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="impact-scope" class="section-padding">
+            <canvas id="particle-network-6" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Impact & Future Scope</h2>
+                <p class="impact-introduction">
+                    The development of this robust pick-and-place system establishes a foundation for advancing robotic manipulation in industrial settings. Looking ahead, I envision expanding the system's capabilities through two key research directions that could revolutionize human-robot interaction and autonomous manipulation.
+                </p>
+        
+                <div class="impact-areas">
+                    <div class="impact-card research">
+                        <div class="impact-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Manufacturing</h3>
+                        <div class="impact-content">
+                            <p>The system's modular architecture and adaptive capabilities make it particularly valuable for flexible manufacturing, where production lines must quickly adapt to different products and processes.</p>
+                            <div class="potential-applications">
+                                <span>Assembly Lines</span>
+                                <span>Bin Picking</span>
+                                <span>Component Handling</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="impact-card research">
+                        <div class="impact-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Automation Integration</h3>
+                        <div class="impact-content">
+                            <p>The integration of motion capture with robotic control demonstrates a pathway for creating more adaptive industrial automation systems that can safely operate in dynamic environments.</p>
+                            <div class="potential-applications">
+                                <span>Workspace Monitoring</span>
+                                <span>Safety Systems</span>
+                                <span>Process Automation</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="impact-card industrial">
+                        <div class="impact-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Research Platform</h3>
+                        <div class="impact-content">
+                            <p>This system serves as a versatile platform for testing advanced manipulation strategies and human-robot interaction paradigms, contributing to broader robotics research.</p>
+                            <div class="potential-applications">
+                                <span>Motion Planning</span>
+                                <span>Control Systems</span>
+                                <span>HRI Studies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="future-directions">
+                    <h3>Future Directions</h3>
+                    <div class="direction-grid">
+                        <div class="direction-card">
+                            <h4>Vision-Language Integration</h4>
+                            <p>Implementing Vision-Language Models to enable natural language interfaces for robot control, making complex manipulation tasks as simple as verbal instructions.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h4>Learning-based Manipulation</h4>
+                            <p>Developing reinforcement learning approaches with human feedback for teaching robots new manipulation tasks efficiently and adaptively.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h4>Enhanced Sensing</h4>
+                            <p>Integrating force-torque sensing and advanced proprioception for more precise and responsive manipulation capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="closing-statement">
+                    <p>This project represents not just a technical achievement in robotic manipulation, but a step toward more intuitive and adaptable industrial automation. Through continued development and integration of AI technologies, we can create robotic systems that are both more capable and more accessible to non-expert users.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-tools" class="section-padding">
+            <canvas id="particle-network-7" class="background-canvas"></canvas>
+            <div class="container">
+                <h2>Tools & Technologies</h2>
+                <p class="section-description">
+                    This project integrates various cutting-edge technologies and tools, combining robotics frameworks, motion capture systems, and simulation environments to create a robust and efficient manipulation system.
+                </p>
+        
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <img src="assets/ros-icon.png" alt="ROS icon">
+                        <h4>ROS</h4>
+                        <p>Robot Operating System for system integration and control</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/python-icon.png" alt="Python icon">
+                        <h4>Python</h4>
+                        <p>Primary programming language for high-level control</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/c++-icon.png" alt="C++ icon">
+                        <h4>C++</h4>
+                        <p>Low-level robot control and real-time processing</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/vicon-icon.png" alt="Vicon icon">
+                        <h4>Vicon System</h4>
+                        <p>High-precision motion capture and tracking</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/pybullet-icon.png" alt="PyBullet icon">
+                        <h4>PyBullet</h4>
+                        <p>Physics simulation and motion planning validation</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/kinova-icon.png" alt="Kinova icon">
+                        <h4>Kinova API</h4>
+                        <p>Robot control and command interface</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/eigen-icon.png" alt="Eigen icon">
+                        <h4>Eigen</h4>
+                        <p>Linear algebra and matrix computations</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/pinocchio-icon.png" alt="Pinocchio icon">
+                        <h4>Pinocchio</h4>
+                        <p>Robot dynamics and kinematics calculations</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/urdf-icon.png" alt="URDF icon">
+                        <h4>URDF</h4>
+                        <p>Robot modeling and description</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/numpy-icon.png" alt="NumPy icon">
+                        <h4>NumPy</h4>
+                        <p>Numerical computing and data processing</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/opencv-icon.png" alt="OpenCV icon">
+                        <h4>OpenCV</h4>
+                        <p>Computer vision and image processing</p>
+                    </div>
+        
+                    <div class="tool-item">
+                        <img src="assets/git-icon.png" alt="Git icon">
+                        <h4>Git</h4>
+                        <p>Version control and code management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footnote">
+        <div class="container">
+            <div class="footnote-content">
+                <p class="copyright">© 2025 Sai Sharan Thirunagari. All rights reserved.</p>
+                <p class="tagline">Innovating at the intersection of robotics and artificial intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
