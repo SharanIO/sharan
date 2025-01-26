@@ -36,15 +36,13 @@
             </div>
             <div class="project-introduction">
                 <p class="section-description">
-                    In the world of robotics, precisely controlling force is one of our greatest challenges. 
-                    While robots excel at moving with sub-millimeter accuracy, asking them to apply just the 
-                    right amount of pressure – like a skilled therapist performing a massage – presents a 
-                    fascinating engineering puzzle. I tackled this challenge by developing a robotic system 
-                    that combines the precision of automation with the gentle touch needed for soft tissue 
-                    manipulation. Through innovative mechanical design and systematic iteration, I created an 
-                    end-effector that can apply controlled pressure across tissue surfaces while ensuring 
-                    safety and effectiveness. The system combines pneumatic actuation with passive elements, 
-                    allowing it to adapt to varying tissue properties while maintaining consistent force control.
+                    In the realm of medical robotics, handling delicate tissues with precision presents unique engineering challenges. 
+        I developed a robotic system that combines innovative mechanical design with adaptive control to achieve gentle 
+        and effective tissue manipulation. Through systematic iteration and testing, I created an end-effector featuring 
+        a novel passive compliance mechanism that naturally adapts to varying tissue geometries. The system integrates 
+        pneumatic actuation with mechanical elements, enabling consistent and safe interaction across different tissue 
+        surfaces while maintaining procedural effectiveness.
+
                 </p>
                 <div class="illustration-container">
                     <!-- Placeholder for your illustration -->
@@ -120,8 +118,7 @@
                 <p class="evolution-description">
                     Each iteration brought new insights about the complex interplay between mechanical design, 
                     force control, and tissue interaction. What began as a basic pneumatic system evolved into 
-                    a sophisticated end-effector capable of adapting to varying tissue properties while maintaining 
-                    precise force control.
+                    a sophisticated end-effector capable of adapting to varying tissue properties.
                 </p>
             </div>
         
@@ -136,9 +133,8 @@
                     <div class="iteration-content">
                         <h3>Initial Prototype</h3>
                         <p class="challenge-text">
-                            The first challenge was establishing basic force control while ensuring the system 
-                            could interact safely with tissue surfaces. I approached this by designing a 
-                            pneumatic actuation system combined with passive joints for initial force absorption.
+                            The first challenge was exploring concept feasibility that could allow for gentle
+                            tissue manipulation. 
                         </p>
                         <div class="key-features">
                             <h4>Key Innovations</h4>
@@ -222,7 +218,7 @@
                 </div>
                 <div class="iteration-card">
                     <div class="iteration-visual">
-                        <img src="./assets/map1_result.png" alt="Initial Prototype" class="design-img">
+                        <img src="./assets/Project_1_Iter4.svg" alt="Initial Prototype" class="design-img">
                         <!-- Consider using a carousel here to show multiple views -->
                     </div>
                     <div class="iteration-content">
@@ -261,20 +257,76 @@
             <canvas id="particle-network-4" class="background-canvas"></canvas>
             <div class="container">
                 <h2>Testing & Validation</h2>
-                <p class="section-description">
+                <p class="evolution-description">
                     Each iteration of the design underwent rigorous testing to validate its performance 
                     and identify areas for improvement. These tests provided crucial insights that guided 
                     the evolution of the system.
                 </p>
                 
                 <div class="test-cases-carousel">
-                    <button class="arrow left-arrow">&larr;</button>
+                    <button class="test-arrow test-left-arrow">&larr;</button>
                     <div class="test-cases-container">
                         <div class="test-case">
                             <div class="test-video">
-                                <video controls>
-                                    <source src="path_to_video" type="video/mp4">
-                                </video>
+                                <div class="video-container">
+                                    <iframe width="410" height="729" 
+                                    src="https://www.youtube.com/embed/GiXD0gUNKjk" 
+                                    title="Testing 1" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="test-description">
+                                <h3>Force Application Test</h3>
+                                <p>Validation of the passive compliance mechanism showing uniform force distribution across tissue surface.</p>
+                            </div>
+                        </div>
+                        <div class="test-case">
+                            <div class="test-video">
+                                <div class="video-container">
+                                    <iframe width="410" height="729" 
+                                    src="https://www.youtube.com/embed/kq72pR6nH14" 
+                                    title="Testing 2" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="test-description">
+                                <h3>Force Application Test</h3>
+                                <p>Validation of the passive compliance mechanism showing uniform force distribution across tissue surface.</p>
+                            </div>
+                        </div>
+                        <div class="test-case">
+                            <div class="test-video">
+                                <div class="video-container">
+                                    <iframe width="410" height="729" 
+                                    src="https://www.youtube.com/embed/-S9VxJO0PdI" 
+                                    title="Testing 3" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="test-description">
+                                <h3>Force Application Test</h3>
+                                <p>Validation of the passive compliance mechanism showing uniform force distribution across tissue surface.</p>
+                            </div>
+                        </div>
+                        <div class="test-case">
+                            <div class="test-video">
+                                <div class="video-container">
+                                    <iframe width="1083" height="609" src="https://www.youtube.com/embed/80Q5OwTP514" 
+                                    title="Final demo gripper" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div class="test-description">
                                 <h3>Force Application Test</h3>
@@ -283,7 +335,7 @@
                         </div>
                         <!-- Additional test cases would follow -->
                     </div>
-                    <button class="arrow right-arrow">&rarr;</button>
+                    <button class="test-arrow test-right-arrow">&rarr;</button>
                 </div>
             </div>
         </section>
@@ -292,7 +344,7 @@
             <canvas id="particle-network-5" class="background-canvas"></canvas>
             <div class="container">
                 <h2>Advanced Development</h2>
-                <p class="section-description">
+                <p class="evolution-description">
                     Building upon our initial success with the passive end-effector, we explored advanced 
                     techniques for improving tissue manipulation through 3D modeling and robotic integration.
                 </p>

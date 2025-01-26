@@ -352,6 +352,7 @@
     padding: 10px 15px;
     cursor: pointer;
     font-size: 18px;
+    border-radius: 5px;
     z-index: 10;
   }
   
@@ -447,6 +448,7 @@
     max-width: 1200px;
     margin: 3rem auto;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .test-cases-container {
@@ -456,12 +458,37 @@
 
 .test-case {
     flex: 0 0 100%;
-    padding: 2rem;
+    max-width: 100%;
+    padding: 0rem;
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 2rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.test-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  
+.test-left-arrow {
+    left: 10px;
+}
+
+.test-right-arrow {
+    right: 10px;
 }
 
 .test-video {
@@ -490,10 +517,6 @@
     pointer-events: all;
 }
 
-.test-case {
-    position: relative;
-    z-index: 1;
-}
 
 .test-video video {
     width: 100%;
@@ -605,7 +628,7 @@
     color: #555;
     max-width: 800px;
     margin: 2rem auto;
-    text-align: center;
+    text-align: left;
 }
 
 .impact-areas {

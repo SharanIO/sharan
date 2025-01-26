@@ -477,6 +477,38 @@ document.addEventListener('DOMContentLoaded', function() {
   updateArrows();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.test-cases-container');
+  const cards = document.querySelectorAll('.test-case');
+  const leftArrow = document.querySelector('.test-left-arrow');
+  const rightArrow = document.querySelector('.test-right-arrow');
+  let currentIndex = 0;
+
+  function updateArrows() {
+    // Show/hide arrows based on current position
+    leftArrow.style.display = currentIndex > 0 ? 'block' : 'none';
+    rightArrow.style.display = currentIndex < cards.length - 1 ? 'block' : 'none';
+  }
+
+  function showCard(index) {
+    // Move the container to show the selected card
+    container.style.transform = `translateX(-${index * 100}%)`;
+    currentIndex = index;
+    updateArrows();
+  }
+
+  leftArrow.addEventListener('click', () => {
+    if (currentIndex > 0) showCard(currentIndex - 1);
+  });
+
+  rightArrow.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) showCard(currentIndex + 1);
+  });
+
+  // Initialize arrow visibility
+  updateArrows();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   new ParticleNetwork('particle-network-1');
   new ParticleNetwork('particle-network-2', 70); // You can customize the particle count
