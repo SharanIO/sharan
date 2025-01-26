@@ -58,19 +58,19 @@
                 </div>
                 <div class="project-highlights">
                     <div class="highlight-card">
-                        <span class="highlight-number">10</span>
-                        <span class="highlight-label">Degrees of Freedom</span>
-                        <span class="highlight-context">Enabling complex snake-like movements</span>
+                        <span class="highlight-number">2D/3D</span>
+                        <span class="highlight-label">Detection Pipeline</span>
+                        <span class="highlight-context">Combined vision and depth processing</span>
                     </div>
                     <div class="highlight-card">
                         <span class="highlight-number">3</span>
-                        <span class="highlight-label">Movement Patterns</span>
-                        <span class="highlight-context">Sidewinding, Lateral, and Linear motion</span>
+                        <span class="highlight-label">Core Capabilities</span>
+                        <span class="highlight-context">Visual detection, 3D localization, and Navigation</span>
                     </div>
                     <div class="highlight-card">
                         <span class="highlight-number">NVIDIA</span>
                         <span class="highlight-label">Jetson Nano</span>
-                        <span class="highlight-context">Advanced onboard processing</span>
+                        <span class="highlight-context">Real-time vision processing acceleration</span>
                     </div>
                 </div>
             </div>
@@ -129,23 +129,22 @@
                     <div class="iteration-content">
                         <h3>Initial Prototype</h3>
                         <p class="challenge-text">
-                            In the first phase of the project, I focused on establishing a basic object detection system using Spot's onboard cameras. 
-                            I implemented an SSD ResNet model for object detection, which provided a foundation for further development. 
-                            This initial prototype allowed me to identify key areas for improvement, particularly in processing speed and integration with Spot's existing systems.
+                            In the first phase, I developed a robust object detection system leveraging Spot's onboard cameras and an SSD ResNet model. This foundation enabled identification of optimization opportunities, particularly in processing efficiency and system integration.
                         </p>
                         <div class="key-features">
                             <h4>Key Specifications</h4>
                             <ul>
-                                <li>Chose SSD ResNet for its balance of accuracy and speed in object detection</li>
-                                <li>Utilized Spot's SDK to access and control the onboard cameras for raw image data capture.</li>
-                                <li>Implemented initial processing pipeline using OpenCV and TensorFlow</li>
+                                <li>Implemented SSD ResNet architecture optimized for detection speed and accuracy</li>
+                                <li>Integrated Spot's SDK for direct camera feed access and control</li>
+                                <li>Developed data pipeline using OpenCV for preprocessing and augmentation</li>
+                                <li>Built model training workflow with custom dataset preparation and annotation</li>
+                                <li>Utilized TensorFlow for network implementation and training</li>
                             </ul>
                         </div>
                         <div class="iteration-learnings">
                             <h4>Lessons learned</h4>
                             <p>
-                                Real-world robotics applications require careful balancing of accuracy and computational efficiency. 
-                                The initial prototype revealed the importance of optimizing for Spot's specific hardware constraints.
+                                Robotics applications demand precise balance between accuracy and computational efficiency. This prototype demonstrated critical optimization requirements for Spot's hardware constraints and revealed opportunities for enhanced real-time performance.
                             </p>
                         </div>
                     </div>
@@ -188,23 +187,20 @@
                     <div class="iteration-content">
                         <h3>Implementing 3D Localization</h3>
                         <p class="challenge-text">
-                            The next major step was developing the 3D localization capability. 
-                            I leveraged the depth data from Spot's cameras and combined it with the 2D detection results to calculate the precise 3D coordinates of detected objects. 
-                            This process involved careful calibration of the camera parameters and development of algorithms to transform the depth information into Spot's coordinate system. 
+                            Enhanced the object detection system with 3D spatial awareness by integrating Spot's depth camera data with 2D detections. The implementation required precise camera calibration and coordinate frame transformation. 
                         </p>
                         <div class="key-features">
                             <h4>Key Decisions</h4>
                             <ul>
-                                <li>Used camera intrinsic and extrinsic parameters for accurate 3D projection</li>
-                                <li>Implemented a depth filtering algorithm to reduce noise in 3D estimations</li>
-                                <li>Developed a coordinate transformation system to align camera and robot frames</li>
+                                <li>Utilized pinhole camera model with intrinsic parameters (fx, fy) and principal points (cx, cy) for accurate projection</li>
+                                <li>Applied depth filtering to minimize sensor noise and improve position estimates</li>
+                                <li>Implemented coordinate transforms between camera, robot, and world frames using homogeneous transformations</li>
                             </ul>
                         </div>
                         <div class="iteration-learnings">
                             <h4>Lessons learned</h4>
                             <p>
-                                Accurate 3D localization requires a deep understanding of both computer vision principles and robotic kinematics. 
-                                The importance of precise camera calibration in 3D vision applications became clear during this phase.
+                                Achieving reliable 3D localization demanded precise camera calibration and robust depth processing. The mathematical foundation shown in the equations proved essential for accurate world-space positioning.
                             </p>
                         </div>
                     </div>
@@ -224,16 +220,15 @@
                         <div class="key-features">
                             <h4>Key Decisions</h4>
                             <ul>
-                                <li>Utilized ROS topics and services for modular communication between components</li>
-                                <li>Implemented a state machine to manage different phases of object detection.</li>
-                                <li>Developed a custom ROS node to interface between our perception system and Spot's navigation stack</li>
+                                <li>Implemented RRT (Rapidly-exploring Random Tree) algorithm for efficient path planning around obstacles</li>
+                                <li>Created ROS nodes for interfacing perception data with Spot's navigation stack</li>
+                                <li>Developed waypoint generation system from 3D object coordinates</li>
                             </ul>
                         </div>
                         <div class="iteration-learnings">
                             <h4>Lessons learned</h4>
                             <p>
-                                Integrating custom perception systems with existing robotic platforms requires a thorough understanding of both the platform's capabilities and limitations. 
-                                The modular nature of ROS proved invaluable in managing complex robotic systems.
+                                Robot integration demands deep understanding of both platform-specific APIs and general robotics frameworks. RRT's effectiveness for real-time path planning and ROS's modular architecture proved essential for system integration.
                             </p>
                         </div>
                     </div>
@@ -246,22 +241,23 @@
                     <div class="iteration-content">
                         <h3>Optimizing for Real-time Performance</h3>
                         <p class="challenge-text">
-                            Throughout the development process, ensuring real-time performance was a constant challenge. In this final phase, I focused on optimizing the entire pipeline for speed and efficiency. 
-                            This involved refining the object detection model to run more efficiently on Spot's hardware, streamlining the 3D localization calculations, and optimizing the communication between different components of the system. 
+                            Implemented a distributed system architecture to enhance real-time performance. The design integrates vision processing, ROS middleware, and gRPC communication to efficiently connect client-side perception with Spot's onboard systems. 
                         </p>
                         <div class="key-features">
                             <h4>Key Decisions</h4>
                             <ul>
                                 <!-- <li>Implemented model quantization to reduce the computational load of the object detection network</li> -->
-                                <li>Utilized multi-threading to parallelize perception and navigation tasks</li>
-                                <li>Optimized ROS message passing to reduce communication overhead</li>
+                                <li>Architected modular pipeline with nodes for perception, navigation, and robot state</li>
+                                <li>Utilized gRPC for efficient client-robot communication</li>
+                                <li>Implemented parallel processing for vision and control tasks</li>
+                                <li>Optimized ROS message passing and service calls</li>
+                                <li>Leveraged Spot's API for direct hardware access and control</li>
                             </ul>
                         </div>
                         <div class="iteration-learnings">
                             <h4>Lessons learned</h4>
                             <p>
-                                Real-time performance in robotics often requires a holistic approach to optimization, considering everything from algorithm efficiency to system architecture. 
-                                The importance of profiling and benchmarking in identifying performance bottlenecks became evident.
+                                Achieving robust real-time performance required careful consideration of system architecture and communication patterns. The combination of ROS for modular development and gRPC for efficient client-robot communication proved essential for meeting performance requirements.
                             </p>
                         </div>
                     </div>
