@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bio-Inspired Snake Robot: Engineering Nature's Elegance</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,11 +14,22 @@
 
     <header>
         <nav id="desktop-nav" class="smart-scroll">
-            <h1 class="logo">Sai Sharan Thirunagari</h1>
+            <h1 class="logo"><a href="index.html" class="logo-link">Sai Sharan Thirunagari</a></h1>
             <ul class="nav-links">
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#blogs">Blogs</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
+                <li class="dropdown">
+                    <a href="index.html#projects" class="dropdown-trigger">Projects <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="Project_1.html">Soft Object Manipulation</a></li>
+                      <li><a href="Project_2.html">Snake Robot</a></li>
+                      <li><a href="Project_3.html">Kinova Gen3 Robot</a></li>
+                      <li><a href="Project_4.html">Spot: Fetch</a></li>
+                      <li><a href="https://github.com/SharanIO/Visual-Odometry.git">Stereo Visual Odometry</a></li>
+                      <li><a href="#modal3">Deep Reinforcement Learning</a></li>
+                      <li><a href="https://github.com/SharanIO/PID-and-Pure-Pursuit.git">PID and Pure Pursuit Controller</a></li>
+                    </ul>
+                  </li>
                 <li><a href="index.html#end-note">Contact</a></li>
             </ul>
         </nav>

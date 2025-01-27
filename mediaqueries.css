@@ -1,133 +1,179 @@
+/* Base Mobile First Approach */
 @media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
   section {
     margin: 0 5%;
   }
+  
+  nav {
+    margin: 0 5%;
+    width: 90%;
+  }
+
+  #profile {
+    height: auto;
+    padding: 12vh 0;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+  }
+}
+
+/* Large Tablets & Small Laptops */
+@media screen and (max-width: 1200px) {
+  /* Navigation Changes */
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    padding: 0 5%;
+  }
+
+  /* Layout Adjustments */
+  #profile, .section-container {
+    display: block;
+  }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
   }
-  .about-containers {
-    margin-top: 0;
+
+  /* Project Grid Adjustments */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Expertise Section */
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-/* Update your existing media queries */
+/* Tablets & Large Mobile */
 @media screen and (max-width: 768px) {
-  /* Keep your existing media query content */
-  
-  /* Add these new styles */
-  #project-header .project-highlights {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+  /* Typography Adjustments */
+  .title {
+    font-size: 2.5rem;
   }
-  
-  #project-header .highlight-card {
-      width: 100%;
-      max-width: 300px;
-  }
-  
-  #project-header .title {
-      font-size: 2.5rem; /* Smaller font size for mobile */
-  }
-  
-  #project-details .expertise-tags {
-      justify-content: center;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
+  .section__text__p2 {
     font-size: 1.25rem;
   }
+
+  /* Project Cards */
+  .project-item {
+    height: 350px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    width: auto;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Contact Section */
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+  /* Section Spacing */
+  section {
+    margin: 0 1rem;
+    padding-top: 2vh;
+  }
+
+  /* Profile Section */
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Typography */
   .logo {
     font-size: 1.5rem;
   }
+
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+
+  /* Navigation */
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  /* Project Layout */
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+
+  .project-item {
+    height: 300px;
   }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
-  .degrees-container {
-    display: flex;
+
+  /* Button Adjustments */
+  .btn-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Device-Specific Adjustments */
+/* iPhone Pro Max */
+@media screen and (max-width: 428px) {
+  .section__pic-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  #profile {
+    height: auto;
+    padding: 15vh 0;
+  }
+
+  .section__pic-container {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* High-DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
   }
 }

@@ -57,6 +57,10 @@ a,
   transition: all 300ms ease;
 }
 
+b,.btn {
+  transition: all 300ms ease;
+}
+
 /* DESKTOP NAV */
 
 nav,
@@ -82,8 +86,20 @@ nav {
   font-size: 1.5rem;
 }
 
-a {
+nav a {
   color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a {
+  color: #998e1a;  /* An olive color that matches your theme */
+  text-decoration: none;
+  transition: color 0.3s ease;  /* Smooth color transition on hover */
+}
+
+b {
+  color: rgb(0, 0, 0);
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -95,12 +111,27 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+b:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
 .logo {
   font-size: 2rem;
 }
 
-.logo:hover {
-  cursor: default;
+.logo-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #e6e9d8;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* HAMBURGER MENU */
@@ -378,6 +409,80 @@ section {
   padding: 1rem 2rem;
 }
 
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-trigger .fa-chevron-down {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.active .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: white;
+  min-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 0.75rem 1rem;
+  display: block;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+  color: #998e1a;
+  transform: translateX(5px);
+  text-decoration: none;
+  text-underline-offset: 0;
+}
+
+/* Add hover effect to show dropdown */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown:hover .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
 #intro h2, #skills-preview h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -400,8 +505,53 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
+  position: relative;
+  transition: max-height 0.5s ease;
+  max-height: 600px; /* This height shows approximately 3 rows */
+  overflow: hidden;
 }
 
+.skills-grid.expanded {
+  max-height: 2000px; /* Large enough to show all items */
+}
+
+.skills-grid::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px; /* Adjust fade height as needed */
+  background: linear-gradient(
+      to bottom,
+      rgba(249, 249, 249, 0) 0%,
+      rgba(249, 249, 249, 1) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.skills-grid.expanded::after {
+  opacity: 0;
+}
+
+.view-more-btn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  background: none;
+  color: rgb(53, 53, 53);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.view-more-btn:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
 .skill-card {
   background-color: white;
   border-radius: 8px;
@@ -578,6 +728,15 @@ h2 {
 #projects {
   background-color: #f9f9f9;
   padding: 4rem 0;
+}
+
+.background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .section-description {

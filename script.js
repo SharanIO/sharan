@@ -509,6 +509,60 @@ document.addEventListener('DOMContentLoaded', function() {
   updateArrows();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const skillsGrid = document.querySelector('.skills-grid');
+  const viewMoreBtn = document.querySelector('.view-more-btn');
+  
+  if (viewMoreBtn && skillsGrid) {
+      viewMoreBtn.addEventListener('click', function() {
+          skillsGrid.classList.toggle('expanded');
+          
+          // Update button text
+          if (skillsGrid.classList.contains('expanded')) {
+              viewMoreBtn.textContent = 'Show Less';
+          } else {
+              viewMoreBtn.textContent = 'View All Skills';
+              // Smooth scroll back to skills section
+              skillsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+      });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all dropdown triggers
+  const dropdowns = document.querySelectorAll('.dropdown');
+  
+  dropdowns.forEach(dropdown => {
+      // Handle click on dropdown trigger
+      const trigger = dropdown.querySelector('.dropdown-trigger');
+      
+      trigger.addEventListener('click', function(e) {
+          // Prevent navigating to #projects when clicking the dropdown trigger
+          e.preventDefault();
+          
+          // Toggle active class on dropdown
+          dropdown.classList.toggle('active');
+          
+          // Close other open dropdowns
+          dropdowns.forEach(otherDropdown => {
+              if (otherDropdown !== dropdown) {
+                  otherDropdown.classList.remove('active');
+              }
+          });
+      });
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+          dropdowns.forEach(dropdown => {
+              dropdown.classList.remove('active');
+          });
+      }
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   new ParticleNetwork('particle-network-1');
   new ParticleNetwork('particle-network-2', 70); // You can customize the particle count
@@ -517,5 +571,6 @@ document.addEventListener('DOMContentLoaded', () => {
   new ParticleNetwork('particle-network-5', 70);
   new ParticleNetwork('particle-network-6', 70);
   new ParticleNetwork('particle-network-7', 70);
+  new ParticleNetwork('projectsCanvas', 70);
 });
 

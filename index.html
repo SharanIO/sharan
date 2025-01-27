@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sharan</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
@@ -16,11 +16,22 @@
     <header>
       <!-- Desktop Navigation -->
       <nav id="desktop-nav" class="smart-scroll">
-        <h1 class="logo">Sai Sharan Thirunagari</h1>
+        <h1 class="logo"><a href="index.html" class="logo-link">Sai Sharan Thirunagari</a></h1>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#blogs">Blogs</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li class="dropdown">
+            <a href="#projects" class="dropdown-trigger">Projects <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="Project_1.html">Soft Object Manipulation</a></li>
+              <li><a href="Project_2.html">Snake Robot</a></li>
+              <li><a href="Project_3.html">Kinova Gen3 Robot</a></li>
+              <li><a href="Project_4.html">Spot: Fetch</a></li>
+              <li><a href="https://github.com/SharanIO/Visual-Odometry.git">Stereo Visual Odometry</a></li>
+              <li><a href="#modal3">Deep Reinforcement Learning</a></li>
+              <li><a href="https://github.com/SharanIO/PID-and-Pure-Pursuit.git">PID and Pure Pursuit Controller</a></li>
+            </ul>
+          </li>
           <li><a href="#end-note">Contact</a></li>
         </ul>
       </nav>
@@ -79,22 +90,23 @@
 
       <section id="intro">
         <div id="gradientWave" class="background-effect"></div>
+        <canvas id="particle-network-1" class="background-canvas"></canvas>
         <div class="container">
           <h2>Welcome to My Portfolio</h2>
           <p>
-            As a robotics engineer, I specialize in creating intelligent machines that push the boundaries of what's possible. My work spans across mechatronics, control systems, and artificial intelligence, with a focus on developing robots that can adapt to and interact with their environment in meaningful ways.
+            At the intersection of robotics and artificial intelligence, I work to bridge the gap between human potential and mechanical precision. As a <a href="about.html" class="inline-link">robotics engineer</a>, I'm driven by the challenge of creating intelligent systems that not only execute tasks but adapt and learn from their environments. From developing sophisticated manipulation algorithms for industrial automation to implementing cutting-edge computer vision systems, my work focuses on making robots more capable, intuitive, and safer to work alongside humans. <a href="about.html" class="inline-link">Learn more about my journey and vision →</a>
           </p>
           <p>
-            On this site, you'll find:
+            Throughout this portfolio, you'll discover:
           </p>
           <ul>
-            <li>An overview of my technical skills and areas of expertise</li>
-            <li>Showcases of my most impactful projects in robotics and AI</li>
-            <li>My professional background and educational journey</li>
-            <li>Ways to get in touch for collaboration or opportunities</li>
+            <li>Innovative <a href="#projects" class="inline-link">projects</a> showcasing real-world applications in robotic manipulation, computer vision, and human-robot interaction, complete with detailed technical insights and practical outcomes</li>
+            <li>A comprehensive overview of my <a href="#expertise" class="inline-link">expertise</a> across robotics, AI, and control systems, demonstrating how these disciplines combine to create more intelligent and capable machines</li>
+            <li>Behind-the-scenes looks at my development process, from initial concept to final implementation, highlighting the technical challenges and creative solutions that define each <a href="#projects" class="inline-link">project</a></li>
+            <li>Opportunities for <a href="#end-note" class="inline-link">collaboration</a> and discussion about the future of robotics and automation</li>
           </ul>
           <p>
-            I invite you to explore and discover how my passion for robotics translates into innovative solutions for real-world challenges.
+            Whether you're a fellow engineer, potential collaborator, or simply curious about the future of robotics, I invite you to explore how my work pushes the boundaries of what's possible in human-robot interaction. Each <a href="#projects" class="inline-link">project</a> tells a story of innovation, from enhancing industrial automation with advanced manipulation techniques to developing more intuitive ways for robots and humans to work together. <a href="#end-note" class="inline-link">Let's connect and discuss how we can shape the future of robotics together →</a>
           </p>
         </div>
         <div class="scroll-arrow">
@@ -130,6 +142,7 @@
 
       <section id="expertise">
         <div class="geometric-background"></div>
+        <canvas id="particle-network-2" class="background-canvas"></canvas>
         <div class="container">
           <h2>Areas of Expertise</h2>
           <div class="expertise-grid">
@@ -295,12 +308,14 @@
               <p>Version control</p>
             </div>
             </div>
+            <button class="view-more-btn">View All Skills</button>
         <div class="scroll-arrow">
           <i class="fas fa-chevron-down"></i>
       </div>
       </section>
 
       <section id="projects">
+        <canvas id="projectsCanvas" class="background-canvas"></canvas>
         <div class="container">
           <h2>My Projects</h2>
           <p class="section-description">
