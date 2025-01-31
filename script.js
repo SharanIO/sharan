@@ -565,12 +565,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
   new ParticleNetwork('particle-network-1');
-  new ParticleNetwork('particle-network-2', 70); // You can customize the particle count
-  new ParticleNetwork('particle-network-3', 70);
+  new ParticleNetwork('particle-network-2', 30); // You can customize the particle count
+  new ParticleNetwork('particle-network-3', 30);
   new ParticleNetwork('particle-network-4', 30);
-  new ParticleNetwork('particle-network-5', 70);
-  new ParticleNetwork('particle-network-6', 70);
-  new ParticleNetwork('particle-network-7', 70);
-  new ParticleNetwork('projectsCanvas', 70);
+  new ParticleNetwork('particle-network-5', 30);
+  new ParticleNetwork('particle-network-6', 30);
+  new ParticleNetwork('particle-network-7', 30);
+  new ParticleNetwork('projectsCanvas', 30);
 });
 
